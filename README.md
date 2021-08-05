@@ -45,24 +45,42 @@ string message = $"My name is {my_name}.";
 
 ***
 
-# Remove x characters from the end of a string:
+# Strings:
 
 ### Python3:
 ``` python3
 my_name = "Josh"
+
+# remove x characters from the end of a string:
 my_name = my_name[:-2]
+
+# split strings based on a delimiter
+input_string = "1,2,3"
+items = input_string.split(",")
 ```
 
 ### JavaScript:
 ``` js
 var my_name = "Josh"
+
+// remove x characters from the end of a string:
 my_name = my_name.slice(0, -2);
+
+// split strings based on a delimiter
+var input_string = "1,2,3"
+var items = input_string.split(",")
 ```
 
 ### C#:
 ``` c#
 string my_name = "Josh";
+
+// remove x characters from the end of a string:
 my_name = my_name.Substring(0, my_name.Length - 2);
+
+// split strings based on a delimiter
+string input_string = "1,2,3";
+string[] items = input_string.Split(",");
 ```
 
 ***
