@@ -86,6 +86,28 @@ List<string> my_list = new List<string>();
 
 ***
 
+# How to add to a list:
+
+### Python3:
+```
+my_list = []
+my_list.append("Josh")
+```
+
+### JavaScript:
+```
+var my_list = []
+my_list.push("Josh")
+```
+
+### C#:
+```
+List<string> my_list = new List<string>();
+my_list.Add("Josh");
+```
+
+***
+
 # How to loop over a list:
 
 ### Python3:
