@@ -67,64 +67,45 @@ my_name = my_name.Substring(0, my_name.Length - 2);
 
 ***
 
-# How to create a list:
+# Lists:
 
 ### Python3:
-```
+
+``` python3
+# create a list
 my_list = []
-```
 
-### JavaScript:
-```
-var my_list = []
-```
-
-### C#:
-```
-List<string> my_list = new List<string>();
-```
-
-***
-
-# How to add to a list:
-
-### Python3:
-```
-my_list = []
+# add to the list
 my_list.append("Josh")
-```
 
-### JavaScript:
-```
-var my_list = []
-my_list.push("Josh")
-```
-
-### C#:
-```
-List<string> my_list = new List<string>();
-my_list.Add("Josh");
-```
-
-***
-
-# How to loop over a list:
-
-### Python3:
-```
-for item in items:
+# loop over the list
+for item in my_list:
     print(item)
 ```
 
 ### JavaScript:
-```
+``` js
+// create a list
+var my_list = []
+
+// add to the list
+my_list.push("Josh")
+
+// loop over the list
 for (const item of items){
     console.log(item);
 }
 ```
 
 ### C#:
-```
+``` c#
+// create a list
+List<string> my_list = new List<string>();
+
+// add to the list
+my_list.Add("Josh");
+
+// loop over the list
 foreach (var item in items) {
     Console.WriteLine(item);
 }
