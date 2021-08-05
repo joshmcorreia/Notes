@@ -45,6 +45,28 @@ string message = $"My name is {my_name}.";
 
 ***
 
+# Remove x characters from the end of a string:
+
+### Python3:
+```
+my_name = "Josh"
+my_name = my_name[:-2]
+```
+
+### JavaScript:
+```
+var my_name = "Josh"
+my_name = my_name.slice(0, -2);
+```
+
+### C#:
+```
+string my_name = "Josh";
+my_name = my_name.Substring(0, my_name.Length - 2);
+```
+
+***
+
 # How to create a list:
 
 ### Python3:
