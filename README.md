@@ -22,6 +22,29 @@ Console.WriteLine(message);
 
 ***
 
+# String interpolation:
+
+### Python3:
+Note that these are specifically called "f-strings".
+```
+my_name = "Josh"
+message = f"My name is {my_name}."
+```
+
+### JavaScript:
+```
+var my_name = "Josh"
+var message = `My name is ${my_name}.`
+```
+
+### C#:
+```
+string my_name = "Josh";
+string message = $"My name is {my_name}.";
+```
+
+***
+
 # How to create a list:
 
 ### Python3:
@@ -36,7 +59,7 @@ var my_list = []
 
 ### C#:
 ```
-List<string> my_list = new List<string>(); 
+List<string> my_list = new List<string>();
 ```
 
 ***
