@@ -57,6 +57,9 @@ my_name = my_name[:-2]
 # split strings based on a delimiter
 input_string = "1,2,3"
 items = input_string.split(",")
+
+# check if a string contains another string
+if "Jo" in my_name:
 ```
 
 ### JavaScript:
@@ -69,6 +72,10 @@ my_name = my_name.slice(0, -2);
 // split strings based on a delimiter
 var input_string = "1,2,3"
 var items = input_string.split(",")
+
+// check if a string contains another string
+if my_name.includes("Jo") {
+}
 ```
 
 ### C#:
@@ -81,6 +88,10 @@ my_name = my_name.Substring(0, my_name.Length - 2);
 // split strings based on a delimiter
 string input_string = "1,2,3";
 string[] items = input_string.Split(",");
+
+// check if a string contains another string
+if (my_name.Contains("Jo")) {
+}
 ```
 
 ***
