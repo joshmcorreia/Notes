@@ -1,5 +1,5 @@
 # How to Code:
-This is a comprehensive list of a bunch of common functions that I use. Each section contains how to do it in all of the langauges that I write in so that I can easily switch between languages.
+This is a comprehensive list of a bunch of common functions that I use. Each section contains how to do it in all of the languages that I write in so that I can easily switch between languages.
 
 ***
 
