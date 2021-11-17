@@ -7,17 +7,26 @@ This is a comprehensive list of a bunch of common functions that I use. Each sec
 
 ### Python3:
 ``` python3
+message = "Hello"
 print(message)
 ```
 
 ### JavaScript:
 ``` js
+var message = "Hello"
 console.log(message)
 ```
 
 ### C#:
 ``` c#
+string message = "Hello";
 Console.WriteLine(message);
+```
+
+### bash:
+``` bash
+message="ok"
+echo $message
 ```
 
 ***
@@ -49,6 +58,9 @@ process.StartInfo = startInfo;
 process.Start();
 ```
 
+### bash:
+Everything is a shell command
+
 ***
 
 # String interpolation:
@@ -70,6 +82,12 @@ var message = `My name is ${my_name}.`
 ``` c#
 string my_name = "Josh";
 string message = $"My name is {my_name}.";
+```
+
+### bash:
+``` bash
+my_name="Josh"
+echo "My name is $my_name"
 ```
 
 ***
@@ -139,6 +157,25 @@ string[] items = input_string.Split(",");
 // check if a string contains another string
 if (my_name.Contains("Jo")) {
 }
+```
+
+### bash:
+``` bash
+my_name="Josh"
+
+# remove x characters from the end of a string:
+my_name=${my_name::-2}
+
+# uppercase the string
+my_name=${my_name^^}
+
+# lowercase the string
+my_name=${my_name,,}
+
+# check if a string contains another string
+if [[ $my_name == *"Jo"* ]]; then
+    echo "Name contains 'Jo'"
+fi
 ```
 
 ***
