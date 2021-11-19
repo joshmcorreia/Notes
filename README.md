@@ -113,6 +113,15 @@ items = input_string.split(",")
 
 # check if a string contains another string
 if "Jo" in my_name:
+
+# remove leading and trailing whitespace
+my_name = my_name.strip()
+
+# remove leading whitespace
+my_name = my_name.lstrip()
+
+# remove trailing whitespace
+my_name = my_name.rstrip()
 ```
 
 ### JavaScript:
@@ -135,6 +144,15 @@ var items = input_string.split(",")
 // check if a string contains another string
 if my_name.includes("Jo") {
 }
+
+// remove leading and trailing whitespace
+my_name = my_name.trim()
+
+// remove leading whitespace
+my_name = my_name.trimStart()
+
+// remove trailing whitespace
+my_name = my_name.trimEnd()
 ```
 
 ### C#:
@@ -157,6 +175,15 @@ string[] items = input_string.Split(",");
 // check if a string contains another string
 if (my_name.Contains("Jo")) {
 }
+
+// remove leading and trailing whitespace
+my_name = my_name.Trim();
+
+// remove leading whitespace
+my_name = my_name.TrimStart();
+
+// remove trailing whitespace
+my_name = my_name.TrimEnd();
 ```
 
 ### bash:
