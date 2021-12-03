@@ -259,3 +259,58 @@ foreach (var item in items) {
     Console.WriteLine(item);
 }
 ```
+
+***
+
+# Sets:
+Note: sets are unordered lists with no duplicate elements
+
+### Python3:
+
+``` python3
+# create an empty set
+my_set = set()
+
+# create a pre-populated set
+my_set = set(("josh", "john"))
+OR
+my_set = {"josh", "john"}
+
+# add to the set
+my_set.add("steven")
+
+# remove from the set
+# Note: raises an error if the item does not exist
+my_set.remove("steven")
+
+# discard from the set
+# Note: does not raise an error if the item does not exist
+my_set.discard("steven")
+
+# empty the set
+my_set.clear()
+
+# loop over the set
+for item in my_set:
+    print(item)
+
+# add the contents of one set to another
+set1 = {"josh"}
+set2 = {"john"}
+set1.update(set2) # set1 will now have the contents of both sets
+
+# get the union of two sets
+set1 = {"josh"}
+set2 = {"john"}
+set3 = set1.union(set2)
+```
+
+### JavaScript:
+``` js
+
+```
+
+### C#:
+``` c#
+
+```
