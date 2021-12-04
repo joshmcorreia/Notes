@@ -306,7 +306,7 @@ set1 = {"josh"}
 set2 = {"john"}
 set1.update(set2) # set1 will now have the contents of both sets
 
-# get the union of two sets
+# combine two sets into a new set
 set1 = {"josh"}
 set2 = {"john"}
 set3 = set1.union(set2)
@@ -341,10 +341,14 @@ my_set.clear()
 my_set.forEach(x => console.log(x))
 
 // add the contents of one set to another
-TODO
+var set1 = new Set(["josh"])
+var set2 = new Set(["steven"])
+set1 = new Set([...set1, ...set2])
 
-// get the union of two sets
-TODO
+// combine two sets into a new set
+var set1 = new Set(["josh"])
+var set2 = new Set(["steven"])
+var set3 = new Set([...set1, ...set2])
 ```
 
 ### C#:
