@@ -306,10 +306,22 @@ set1 = {"josh"}
 set2 = {"john"}
 set1.update(set2) # set1 will now have the contents of both sets
 
-# combine two sets into a new set
+# combine two sets into a new set, also known as a union
 set1 = {"josh"}
 set2 = {"john"}
 set3 = set1.union(set2)
+
+# get the intersection of two sets
+# Note: this returns which objects from set1 exist in set2
+set1 = {"josh"}
+set2 = {"josh", "steven"}
+set_intersection = set1.intersection(set2) # this will return `set("josh")`
+
+# get the difference between two sets
+# Note: this returns which objects from set1 do not exist in set2
+set1 = {"josh"}
+set2 = {"steven"}
+set_difference = set1.difference(set2) # this will return `set("josh")`
 ```
 
 ### JavaScript:
@@ -345,10 +357,22 @@ var set1 = new Set(["josh"])
 var set2 = new Set(["steven"])
 set1 = new Set([...set1, ...set2])
 
-// combine two sets into a new set
+// combine two sets into a new set, also known as a union
 var set1 = new Set(["josh"])
 var set2 = new Set(["steven"])
 var set3 = new Set([...set1, ...set2])
+
+// get the intersection of two sets
+// Note: this returns which objects from set1 exist in set2
+var set1 = new Set(["josh"])
+var set2 = new Set(["josh", "steven"])
+var set_intersection = new Set([...set1].filter(x => set2.has(x))); // this will return `Set(["josh"])`
+
+// get the difference between two sets
+// Note: this returns which objects from set1 do not exist in set2
+var set1 = new Set(["josh"])
+var set2 = new Set(["steven"])
+var set_difference = new Set([...set1].filter(x => !set2.has(x))); // this will return `Set(["josh"])`
 ```
 
 ### C#:
