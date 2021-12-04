@@ -276,6 +276,13 @@ my_set = set(("josh", "john"))
 OR
 my_set = {"josh", "john"}
 
+# print out the contents of a set
+print(my_set)
+
+# check if something exists within a set
+if "steven" in my_set:
+    print("steven exists within the set")
+
 # add to the set
 my_set.add("steven")
 
@@ -307,7 +314,37 @@ set3 = set1.union(set2)
 
 ### JavaScript:
 ``` js
+// create an empty set
+var my_set = new Set()
 
+// create a pre-populated set
+var my_set = new Set(["josh", "john"])
+
+// print out the contents of a set
+TODO
+
+// check if something exists within a set
+if (my_set.has("steven")) {
+    console.log("steven exists within the set")
+}
+
+// add to the set
+my_set.add("steven")
+
+// remove from the set
+my_set.delete("steven")
+
+// empty the set
+my_set.clear()
+
+// loop over the set
+my_set.forEach(x => console.log(x))
+
+// add the contents of one set to another
+TODO
+
+// get the union of two sets
+TODO
 ```
 
 ### C#:
