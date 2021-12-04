@@ -377,5 +377,46 @@ var set_difference = new Set([...set1].filter(x => !set2.has(x))); // this will 
 
 ### C#:
 ``` c#
+// create an empty set
+HashSet<string> my_set = new HashSet<string>();
+
+// create a pre-populated set
+HashSet<string> my_set = new HashSet<string>() {"josh", "john"};
+
+// print out the contents of a set
+TODO
+
+// check if something exists within a set
+if (my_set.Contains("steven")) {
+    Console.WriteLine("steven exists within the set")
+}
+
+// add to the set
+my_set.Add("steven")
+
+// remove from the set
+my_set.Remove("steven")
+
+// empty the set
+my_set.Clear()
+
+// loop over the set
+foreach (string entry in my_set) {
+    Console.WriteLine(entry)
+}
+
+// add the contents of one set to another
+TODO
+
+// combine two sets into a new set, also known as a union
+TODO
+
+// get the intersection of two sets
+// Note: this returns which objects from set1 exist in set2
+TODO
+
+// get the difference between two sets
+// Note: this returns which objects from set1 do not exist in set2
+TODO
 
 ```
