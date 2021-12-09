@@ -124,21 +124,20 @@ TODO
 
 // check if something exists within a set
 if (my_set.Contains("steven")) {
-    Console.WriteLine("steven exists within the set")
 }
 
 // add to the set
-my_set.Add("steven")
+my_set.Add("steven");
 
 // remove from the set
-my_set.Remove("steven")
+my_set.Remove("steven");
 
 // empty the set
-my_set.Clear()
+my_set.Clear();
 
 // loop over the set
 foreach (string entry in my_set) {
-    Console.WriteLine(entry)
+    Console.WriteLine(entry);
 }
 
 // add the contents of one set to another
