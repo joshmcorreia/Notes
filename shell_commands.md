@@ -5,7 +5,7 @@
 from subprocess import Popen, PIPE
 
 shell_command = "pip3 list"
-capture = Popen(shell_command, stdout=PIPE, shell=True)
+capture = Popen(shell_command, stdout=PIPE, stderr=PIPE, shell=True)
 std_out, std_err = capture.communicate()
 return_code = capture.returncode
 ```
