@@ -11,7 +11,7 @@ return_code = capture.returncode
 ```
 
 ### JavaScript:
-Not possible
+Not applicable; JavaScript runs in a browser
 
 ### C# ([Source](https://stackoverflow.com/questions/1469764/run-command-prompt-commands)):
 Note: This runs Command Prompt since C# runs on Windows systems. It's better to call libraries when possible.
