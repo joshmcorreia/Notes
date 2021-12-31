@@ -6,6 +6,8 @@ AJAX - Asynchronous JavaScript and XML
 
 API - Application Programming Interface
 
+BASH - Bourne-Again Shell
+
 CMS - Content Management System
 
 COM - Component Object Model
@@ -86,6 +88,8 @@ SQL - Structured Query Language
 
 SVN - Subversion
 
+TCSH - TENEX C Shell
+
 TDD - Test-Driven Development
 
 UI - User Interface
@@ -99,3 +103,5 @@ UX - User Experience
 VS - Visual Studio
 
 XML - eXtensible Markup Language
+
+ZSH - Z Shell
