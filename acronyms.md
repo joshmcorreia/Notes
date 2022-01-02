@@ -2,6 +2,8 @@
 
 AD - Active Directory
 
+AES - Advanced Encryption Standard
+
 AJAX - Asynchronous JavaScript and XML
 
 API - Application Programming Interface
@@ -22,7 +24,15 @@ CSV - Comma Separated Values
 
 CVS - Concurrent Versioning System
 
+DB - Database
+
 DOM - Document Object Model
+
+DPK - Data Protection Key
+
+ECC - Elliptic-Curve Cryptography
+
+ECDSA - Elliptic Curve Digital Signature Algorithm
 
 EOF - End of File
 
@@ -35,6 +45,8 @@ FTP - File Transfer Protocol
 IDE - Integrated Development Environment
 
 GNU - GNU's Not Unix
+
+GPG - GNU Privacy Guard
 
 GPL - General Public License
 
@@ -69,6 +81,8 @@ ORM - Object Relational Mapping
 REGEX - Regular Expression
 
 REST - Representational State Transfer
+
+RSA - Rivest–Shamir–Adleman (asymmetric cryptography algorithm, named after its creators)
 
 SAAS - Software as a Service
 
