@@ -2,8 +2,6 @@
 
 AD - Active Directory
 
-AES - Advanced Encryption Standard
-
 AJAX - Asynchronous JavaScript and XML
 
 API - Application Programming Interface
@@ -13,6 +11,8 @@ BASH - Bourne-Again Shell
 CMS - Content Management System
 
 COM - Component Object Model
+
+CRL - Certificate Revocation List
 
 CRM - Customer Relationship Management
 
@@ -28,12 +28,6 @@ DB - Database
 
 DOM - Document Object Model
 
-DPK - Data Protection Key
-
-ECC - Elliptic-Curve Cryptography
-
-ECDSA - Elliptic Curve Digital Signature Algorithm
-
 EOF - End of File
 
 EOL - End of Line
@@ -45,8 +39,6 @@ FTP - File Transfer Protocol
 IDE - Integrated Development Environment
 
 GNU - GNU's Not Unix
-
-GPG - GNU Privacy Guard
 
 GPL - General Public License
 
@@ -81,8 +73,6 @@ ORM - Object Relational Mapping
 REGEX - Regular Expression
 
 REST - Representational State Transfer
-
-RSA - Rivest–Shamir–Adleman (asymmetric cryptography algorithm, named after its creators)
 
 SAAS - Software as a Service
 
@@ -119,3 +109,69 @@ VS - Visual Studio
 XML - eXtensible Markup Language
 
 ZSH - Z Shell
+
+---
+
+# Cryptography Acronyms
+
+3DES - Triple Data Encryption Standard
+
+AES - Advanced Encryption Standard
+
+ANSI - American National Standards Institute
+
+DES - Data Encryption Standard
+
+DPK - Data Protection Key
+
+ECC - Elliptic-Curve Cryptography
+
+ECDSA - Elliptic Curve Digital Signature Algorithm
+
+FIPS - Federal Information Processing Standard
+
+GPG - GNU Privacy Guard
+
+HMAC - Hash-based Message Authentication Code
+
+KEK - Key Encryption Key
+
+MAC - Message Authentication Code
+
+MD5 - Message Digest 5
+
+MSB - Most Significant Bit
+
+NIST - National Institute of Standards and Technology
+
+PBKDF - Password-Based Key Derivation Function
+
+PBKDF2 - Password-Based Key Derivation Function 2
+
+PGP - Pretty Good Privacy
+
+PKCS - Public Key Cryptography Standards
+
+PKI - Public Key Infrastructure
+
+PKIX - Public Key Infrastructure X.509
+
+PRG - Pseudo-Random Generator
+
+PRGA - Pseudo-Random Generator Algorithm
+
+RSA - Rivest–Shamir–Adleman (asymmetric cryptography algorithm, named after its creators)
+
+SHA - Secure Hash Algorithm
+
+SSL - Secure Socket Layer
+
+TLS - Transport Layer Security
+
+WEP - Wired Equivalent Privacy
+
+WPA - WiFi Protected Access
+
+WPA2 - WiFi Protected Access 2
+
+WPS - WiFi Protected Setup
