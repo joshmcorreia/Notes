@@ -143,6 +143,20 @@ sudo ifconfig eth0 192.168.1.5 netmask 255.255.255.0 up
 
 ---
 
+# Display file information:
+
+### Get the architecture of an executable:
+```
+file output.txt
+```
+
+### Get the Access/Modify/Change/Birth times of a file:
+```
+stat output.txt
+```
+
+---
+
 # Display file sizes:
 
 ### Single file:
