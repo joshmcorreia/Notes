@@ -43,11 +43,16 @@ chsh
 /usr/bin/hostinfo
 ```
 
+### View services that start on startup:
+```
+cat /etc/inetd.conf
+```
+
 ### Connect to box:
 ```
 nc 192.168.199.131 21
 
-telnet 192.168.199.131 13531
+telnet 192.168.199.131 13531 # gets an actual terminal, works from Linux Mint
 
 ftp 192.168.199.131
 ```
