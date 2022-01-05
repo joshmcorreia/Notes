@@ -43,7 +43,13 @@ DROP People;
 INSERT INTO table_name (column1, column2) VALUES (value1, value2);
 ```
 
+### Update the values in a table:
+```
+UPDATE Person SET FirstName="John" WHERE LastName="Smith";
+```
+
 ### Replace the values in a table:
+Note: This is similar to an UPDATE except it won't error out if the row doesn't exist yet, and will create it instead
 ```
 REPLACE INTO table_name (column1, column2) VALUES (value1, value2);
 ```
