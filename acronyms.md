@@ -56,6 +56,8 @@ JSON - JavaScript Object Notation
 
 JVM - Java Virtual Machine
 
+LDAP - Lightweight Directory Access Protocol
+
 LIFO - Last in First Out
 
 LOC - Lines of Code
