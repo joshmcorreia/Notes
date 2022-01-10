@@ -8,6 +8,8 @@ API - Application Programming Interface
 
 BASH - Bourne-Again Shell
 
+BIOS - Basic Input/Output System
+
 CMS - Content Management System
 
 COM - Component Object Model
@@ -177,3 +179,23 @@ WPA - WiFi Protected Access
 WPA2 - WiFi Protected Access 2
 
 WPS - WiFi Protected Setup
+
+---
+
+# Networking Acronyms
+
+DHCP - Dynamic Host Configuration Protocol
+
+DNS - Domain Name Service
+
+IP - Internet Protocol
+
+LAN - Local Area Network
+
+NAS - Network-Attached Storage
+
+VoIP - Voice Over IP
+
+VPN - Virtual Private Network
+
+WAN - Wide Area Network
