@@ -11,6 +11,21 @@ git config pull.rebase true
 git config rebase.autoStash true
 ```
 
+## Stash your changes
+```
+git stash
+```
+
+## Resume your stash
+```
+git stash pop
+```
+
+## Delete all stashes
+```
+git stash clear
+```
+
 ## Fetch all remote tags
 ```
 git fetch --tags
