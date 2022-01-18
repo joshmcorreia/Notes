@@ -61,6 +61,11 @@ git rebase master
 git push --force
 ```
 
+## Undo a commit and keep the changes ([Source](https://stackoverflow.com/a/15772171/7487335))
+```
+git reset HEAD^
+```
+
 ## Revert to a specific commit on a remote branch ([Source](https://stackoverflow.com/a/41726152))
 ```
 git checkout <branch_name>
