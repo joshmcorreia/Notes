@@ -627,3 +627,8 @@ Note: Returns 1 in the base shell, and increments by one for each additional she
 ```
 echo $SHLVL
 ```
+
+### Print out the process id of the current shell:
+```
+echo $$
+```
