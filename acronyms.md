@@ -194,6 +194,8 @@ LAN - Local Area Network
 
 NAS - Network-Attached Storage
 
+NAT - Network Address Translation
+
 VoIP - Voice Over IP
 
 VPN - Virtual Private Network
