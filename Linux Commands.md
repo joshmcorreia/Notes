@@ -193,6 +193,16 @@ find / -name '*.txt' 2>/dev/null
 sudo find / -name "*josh*" 2>/dev/null
 ```
 
+### Find files that changed in the last 24 hours
+[Source](https://stackoverflow.com/a/16086041)
+```
+find / -mtime -1 -ls
+```
+OR
+```
+find / -mmin -1440 -ls
+```
+
 ---
 
 # View files:
