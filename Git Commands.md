@@ -14,6 +14,8 @@ git config rebase.autoStash true
 ## Stash your changes
 ```
 git stash
+
+git stash --include-untracked # includes untracked files
 ```
 
 ## Resume your stash
