@@ -3,25 +3,77 @@ A list of commands for common package managers
 
 ---
 
-# dnf
+# dnf (Dandified YUM)
 
+### List the package info of a specific package
 ```
-# list the package info of a specific package
 dnf info gcc
+```
 
-# list all installed packages
+### List all installed packages
+```
 dnf list
+```
 
-# list all installed packages containing the specified string
+### List all installed packages containing the specified string
+```
 dnf list | grep gcc
+```
 
-# install a specific package
+### Install a package
+```
 dnf install gcc
+```
 
-# update all packages to the latest version
+### Update all packages to the latest version
+```
 Note: used to be `dnf update` but is now an alias to `dnf upgrade`
 dnf upgrade
+```
 
-# update a specific package to the latest version
+### Update a specific package to the latest version
+```
 dnf upgrade gcc
+```
+
+---
+
+# npm (Node Package Manager)
+
+Note: Any of the following can be run with the `-g` flag which uses the global package manager
+The commands `ls` and `list` are interchangeable.
+
+### List the package info of a specific package
+```
+npm -g ls puppeteer
+```
+
+### List all installed packages
+```
+npm -g ls
+```
+
+### List all installed packages containing the specified string
+```
+npm -g ls | grep 'beautify'
+```
+
+### Install a package
+```
+npm -g install puppeteer
+```
+
+### List all outdated packages
+```
+npm -g outdated
+```
+
+### Update all packages to the latest version
+```
+npm -g update
+```
+
+### Update a specific package to the latest version
+```
+npm -g update puppeteer
 ```
