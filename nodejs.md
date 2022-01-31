@@ -1,21 +1,36 @@
 # NodeJS Info
 
-*Note: only use one of these, if you use multiple you'll end up with multiple node installs which is confusing and hard to debug*
+This guide contains multiple ways to install NodeJS, as well as how to install node package manager.
+
+*Note: only use one of these install methods, if you use multiple you'll end up with multiple node installations which is confusing and hard to debug*
 
 ---
 
-## `n` npm package
-Note: `i` and `install` are interchangeable within npm
+## Prerequisites:
 
 ### Install npm
 Note: this step is dependent on your operating system
 ```
 sudo apt install npm -y
 ```
+Note: `i` and `install` are interchangeable within npm
+
+---
+
+## `n` npm package
+
+### Install the `n` package
+```
+npm -g install n
+```
 
 ### Install nodejs
 ```
-npm -g install n
+n stable
+```
+
+### Update nodejs
+```
 n stable
 ```
 
@@ -24,9 +39,9 @@ n stable
 node -v
 ```
 
-### Update nodejs
+### List installed nodejs versions
 ```
-n stable
+n ls
 ```
 
 ### Switch to another installed nodejs version
@@ -37,9 +52,37 @@ n
 ---
 
 ## NVM (Node Version Manager)
+[Source](https://github.com/nvm-sh/nvm)
 
-TODO
+### Install `nvm`
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
 
+### Install nodejs
+```
+nvm install node
+```
+
+### Update nodejs
+```
+nvm install node --reinstall-packages-from=node
+```
+
+### List current nodejs version
+```
+node -v
+```
+
+### List installed nodejs versions
+```
+nvm ls
+```
+
+### Switch to another installed nodejs version
+```
+nvm use 8.10.0
+```
 
 ---
 
