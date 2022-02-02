@@ -1,5 +1,6 @@
 # Ultimate-VSCode-Settings
 
+`settings.json`:
 ```
 {
     "editor.renderWhitespace": "all",
@@ -19,6 +20,18 @@
         "editor.detectIndentation":false
     }
 }
+```
+
+`keybindings.json`:
+```
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    }
+]
 ```
 
 ---
