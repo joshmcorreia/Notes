@@ -77,3 +77,47 @@ npm -g update
 ```
 npm -g update puppeteer
 ```
+
+---
+
+# Yarn
+Yarn is a package/project manager for node
+
+### List the package info of a specific package
+```
+yarn list --pattern puppeteer
+```
+OR
+```
+yarn why puppeteer
+```
+
+### List all installed packages
+```
+yarn list
+```
+
+### List all installed packages containing the specified string
+```
+yarn list | grep 'babel'
+```
+
+### Install a package
+```
+yarn add puppeteer
+```
+
+### List all outdated packages
+```
+yarn outdated
+```
+
+### Update all packages to the latest version
+```
+yarn upgrade
+```
+
+### Update a specific package to the latest version
+```
+yarn upgrade puppeteer
+```
