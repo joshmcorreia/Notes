@@ -1,6 +1,7 @@
 # Why does CORS exist?
 
-[What is the issue CORS is trying to solve?](https://stackoverflow.com/a/27365346])
+* [What is the issue CORS is trying to solve?](https://stackoverflow.com/a/27365346])
+* [same-origin policy and CORS - what's the point?](https://stackoverflow.com/questions/29167428/same-origin-policy-and-cors-whats-the-point)
 
 In simple terms, browsers enforce this to prevent malicious websites from performing requests on other websites using your cookies. An example of this would be a malicious website using JavaScript to log you out of stackoverflow. If the stackoverflow server enabled CORS for a specific website, say `stackoverflow-extension.com`, then a user could access stackoverflow APIs from `stackoverflow-extension.com`.
 
