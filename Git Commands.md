@@ -1,5 +1,14 @@
 # Git Commands
 
+## Set the name used to publish commits:
+```
+git config --global user.name "FIRST_NAME LAST_NAME"
+```
+
+## Set the email used to publish commits:
+```
+git config --global user.email "MY_NAME@example.com"
+```
 
 ## Automatically rebase while pulling:
 ```
