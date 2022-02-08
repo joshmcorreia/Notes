@@ -435,6 +435,44 @@ find / -perm -4000 2>/dev/null
 ```
 
 ---
+# List open files:
+
+### List open files:
+```
+lsof
+```
+
+### Count how many files are open:
+```
+lsof | wc -l
+```
+
+### List files opened by a specific user:
+```
+lsof -u josh
+```
+
+### List all network connections:
+```
+lsof -i
+```
+
+### List processes running on a specific port:
+```
+lsof -i TCP:22
+```
+
+### Search files by PID:
+```
+lsof -p 1337
+```
+
+### Kill all processes of a specific user:
+```
+kill -9 `lsof -t -u josh`
+```
+
+---
 
 # Aliases/Commands:
 
