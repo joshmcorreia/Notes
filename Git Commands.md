@@ -37,24 +37,6 @@ git stash pop
 git stash clear
 ```
 
-## Fetch all remote tags
-```
-git fetch --tags
-
-# if there is a local tag that conflicts with remote, run this
-git fetch --tags --force
-```
-
-## Tag a specific commit ([Source](https://stackoverflow.com/a/4404197))
-```
-git tag -a v1.2 9fceb02 -m "Message here"
-```
-
-## Delete a remote tag ([Source](https://stackoverflow.com/a/12791414))
-```
-git push --delete origin YOUR_TAG_NAME
-```
-
 ## Create a branch
 ```
 git checkout -b new_branch_name
@@ -96,16 +78,6 @@ git rebase -i HEAD~x # where x is the number of commits back that you want to ed
 git push --force-with-lease
 ```
 
-## Get the latest tag for the current branch ([Source](https://stackoverflow.com/a/12791414))
-```
-git describe --tags --abbrev=0
-```
-
-## Check out a specific tag ([Source](https://stackoverflow.com/a/35979751))
-```
-git checkout tags/0.0.1
-```
-
 ## Get remote url
 ```
 git config --get remote.origin.url
@@ -119,4 +91,34 @@ git remote add origin git@bitbucket.org:josh/josh.git
 ## Delete references to branches that no longer exist on remote:
 ```
 git remote prune origin
+```
+
+# Tags:
+
+## Fetch all remote tags
+```
+git fetch --tags
+
+# if there is a local tag that conflicts with remote, run this
+git fetch --tags --force
+```
+
+## Tag a specific commit ([Source](https://stackoverflow.com/a/4404197))
+```
+git tag -a v1.2 9fceb02 -m "Message here"
+```
+
+## Delete a remote tag ([Source](https://stackoverflow.com/a/12791414))
+```
+git push --delete origin YOUR_TAG_NAME
+```
+
+## Get the latest tag for the current branch ([Source](https://stackoverflow.com/a/12791414))
+```
+git describe --tags --abbrev=0
+```
+
+## Check out a specific tag ([Source](https://stackoverflow.com/a/35979751))
+```
+git checkout tags/0.0.1
 ```
