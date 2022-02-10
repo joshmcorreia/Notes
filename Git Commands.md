@@ -103,9 +103,19 @@ git fetch --tags
 git fetch --tags --force
 ```
 
+## List all tags
+```
+git tag
+```
+
 ## Tag a specific commit ([Source](https://stackoverflow.com/a/4404197))
 ```
 git tag -a v1.2 9fceb02 -m "Message here"
+```
+
+## Delete a local tag
+```
+git tag -d 1.0
 ```
 
 ## Delete a remote tag ([Source](https://stackoverflow.com/a/12791414))
