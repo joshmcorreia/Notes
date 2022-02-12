@@ -4,6 +4,11 @@ A list of commands for common package managers
 ---
 # pip3
 
+### Upgrade pip3:
+```
+python3 -m pip install --upgrade pip
+```
+
 ### List the package info of a specific package:
 ```
 pip3 show coloredlogs
@@ -27,7 +32,7 @@ pip3 install coloredlogs
 ### Update all packages to the latest version:
 [Source](https://stackoverflow.com/a/3452888/7487335)
 ```
-pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
 ```
 
 ### Update a specific package to the latest version:
