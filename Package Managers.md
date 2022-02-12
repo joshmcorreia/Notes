@@ -29,6 +29,11 @@ pip3 list | grep coloredlogs
 pip3 install coloredlogs
 ```
 
+### Uninstall a package:
+```
+pip3 uninstall coloredlogs
+```
+
 ### Update all packages to the latest version:
 [Source](https://stackoverflow.com/a/3452888/7487335)
 ```
@@ -62,6 +67,11 @@ dnf list | grep gcc
 ### Install a package:
 ```
 dnf install gcc
+```
+
+### Uninstall a package:
+```
+dnf remove gcc
 ```
 
 ### Update all packages to the latest version:
@@ -100,6 +110,11 @@ npm -g ls | grep 'beautify'
 ### Install a package:
 ```
 npm -g install puppeteer
+```
+
+### Uninstall a package:
+```
+npm -g uninstall puppeteer
 ```
 
 ### List all outdated packages:
@@ -144,6 +159,11 @@ yarn list | grep 'babel'
 ### Install a package:
 ```
 yarn add puppeteer
+```
+
+### Uninstall a package:
+```
+yarn remove puppeteer
 ```
 
 ### List all outdated packages:
