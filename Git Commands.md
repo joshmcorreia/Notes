@@ -47,6 +47,11 @@ git checkout -b new_branch_name
 git push origin new_branch_name
 ```
 
+## Delete all local branches except master ([Source](https://stackoverflow.com/a/58139363))
+```
+git branch | grep -v "master" | xargs git branch -D
+```
+
 ## Delete a remote branch
 ```
 git push origin --delete build_branch
@@ -59,7 +64,7 @@ git rebase master
 git push --force
 ```
 
-## Undo a commit and keep the changes ([Source](https://stackoverflow.com/a/15772171/7487335))
+## Undo a commit and keep the changes ([Source](https://stackoverflow.com/a/15772171))
 ```
 git reset HEAD^
 ```
