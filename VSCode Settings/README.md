@@ -7,6 +7,7 @@
     "editor.dragAndDrop": false, # disable the dumb mouse drag and drop feature
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
+    "terminal.integrated.scrollback": 10000,
     "workbench.colorCustomizations" : {
         "terminal.foreground" : "#000000",
         "terminal.background" : "#ffffff",
