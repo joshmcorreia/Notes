@@ -7,3 +7,13 @@
 ```
 python3 -m venv /home/josh/venv_test
 ```
+
+## Activating a virtual environment:
+```
+source venv_test/bin/activate
+```
+
+## Deactivating a virtual environment:
+```
+deactivate
+```
