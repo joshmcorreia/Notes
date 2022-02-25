@@ -14,6 +14,11 @@ python3 -m pip install --upgrade pip
 pip3 show coloredlogs
 ```
 
+### Get the location of where a package is installed:
+```
+pip3 show coloredlogs | grep Location
+```
+
 ### List all installed packages:
 ```
 pip3 list
