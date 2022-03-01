@@ -8,6 +8,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
     "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.fontFamily": "Consolas",
     "workbench.colorCustomizations" : {
         "terminal.foreground" : "#000000",
         "terminal.background" : "#ffffff",
