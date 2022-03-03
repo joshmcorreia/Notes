@@ -92,6 +92,55 @@ dnf upgrade gcc
 
 ---
 
+# rpm (RPM Package Manager)
+
+### List the package info of a specific package:
+```
+rpm -qi gcc
+```
+
+### List all installed packages:
+```
+rpm -qa
+```
+
+### List all installed packages containing the specified string:
+```
+rpm -qa | grep gcc
+```
+
+### List all files installed by a specific package:
+```
+rpm -ql gcc
+```
+
+### Install a package:
+```
+rpm -i gcc
+```
+
+### Uninstall a package:
+```
+rpm -e gcc
+```
+
+### List all outdated packages:
+```
+
+```
+
+### Update all packages to the latest version:
+```
+
+```
+
+### Update a specific package to the latest version:
+```
+rpm -U gcc
+```
+
+---
+
 # npm (Node Package Manager)
 
 Note: Any of the following can be run with the `-g` flag which uses the global package manager
