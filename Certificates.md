@@ -22,17 +22,17 @@ ___
 
 # Converting Certificates
 
-## Convert a .p7b to PEM ([source](https://serverfault.com/a/417286/525626))
+## Convert a `.p7b` to PEM ([source](https://serverfault.com/a/417286/525626))
 ```
 openssl pkcs7 -inform der -in a.p7b -out a.cer
 ```
 
-## Export certificates from a .p12 ([source](https://unix.stackexchange.com/a/393484/340031))
+## Export certificates from a `.p12`/`.pfx` ([source](https://unix.stackexchange.com/a/393484/340031))
 ```
 openssl pkcs12 -in INPUT.p12 -clcerts -nokeys | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > OUTPUT.cer
 ```
 
-## Export private keys from a .p12 ([source](https://unix.stackexchange.com/a/393484/340031))
+## Export private keys from a `.p12`/`.pfx` ([source](https://unix.stackexchange.com/a/393484/340031))
 ```
 openssl pkcs12 -in INPUT.p12 -nocerts -nodes | sed -ne '/-BEGIN PRIVATE KEY-/,/-END PRIVATE KEY-/p' > OUTPUT.key
 ```
