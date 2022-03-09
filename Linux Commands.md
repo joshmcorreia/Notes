@@ -537,6 +537,12 @@ ssh-keygen # uses the default key size, currently 3072 bits
 ssh-keygen -b 4096 # specifies the key size to be 4096 bits
 ```
 
+### Copy SSH keys to another Linux system:
+[Source](https://askubuntu.com/a/4833)
+```
+ssh-copy-id user@hostname.example.com
+```
+
 ### Connecting to another system:
 ```
 ssh josh@josh.test.com
