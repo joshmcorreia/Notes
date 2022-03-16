@@ -17,5 +17,13 @@
 
 ---
 
+## API Endpoint Validation (POST):
+When validating data, I've found that the following order works best:
+1. Check that the required fields are present (if expected data is missing, raise an error)
+2. Validate the data against a validator (if the API expects a 5-digit number but receives a 3-digit number, raise an error)
+3. Validate that the data received matches the data in the database (if a user wants to update "John" but "John" doesn't exist in the database, raise an error)
+
+---
+
 ## Useful Resources:
 - https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design
