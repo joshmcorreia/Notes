@@ -52,6 +52,16 @@ git push origin new_branch_name
 git branch | grep -v "master" | xargs git branch -D
 ```
 
+## Delete a local branch
+```
+git branch -d build_branch
+```
+
+## Force delete a local branch
+```
+git branch -D build_branch
+```
+
 ## Delete a remote branch
 ```
 git push origin --delete build_branch
