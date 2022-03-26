@@ -1,4 +1,5 @@
 # Ultimate-VSCode-Settings
+<kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> and click `Open Settings (JSON)`
 
 `settings.json`:
 ```
@@ -26,6 +27,9 @@
     }
 }
 ```
+
+---
+<kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> and click `Open Keyboard Shortcuts (JSON)`
 
 `keybindings.json`:
 ```
