@@ -4,7 +4,7 @@
 ```
 {
     "editor.renderWhitespace": "all",
-    "editor.dragAndDrop": false, # disable the dumb mouse drag and drop feature
+    "editor.dragAndDrop": false, // disable the dumb mouse drag and drop feature
     "editor.fontFamily": "Consolas",
     "editor.fontSize": 14,
     "diffEditor.ignoreTrimWhitespace": false,
