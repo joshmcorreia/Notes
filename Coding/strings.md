@@ -28,6 +28,9 @@ my_name = my_name.lstrip()
 
 # remove trailing whitespace
 my_name = my_name.rstrip()
+
+# split a string into a list of letters
+name_letters = list(my_name)
 ```
 
 ### JavaScript:
