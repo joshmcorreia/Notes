@@ -13,6 +13,8 @@
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.fontFamily": "Consolas",
     "terminal.integrated.fontSize": 14,
+    "git.openDiffOnClick": false,
+    "git.showInlineOpenFileAction": true,
     "workbench.colorCustomizations" : {
         "terminal.foreground" : "#000000",
         "terminal.background" : "#ffffff",
