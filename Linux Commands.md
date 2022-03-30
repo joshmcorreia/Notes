@@ -132,6 +132,16 @@ systemctl list-units --type=service --state=running
 systemctl status polkit
 ```
 
+### Enable a particular service:
+```
+sudo systemctl enable polkit
+```
+
+### Disable a particular service:
+```
+sudo systemctl disable polkit
+```
+
 ### Start a particular service:
 ```
 sudo systemctl start polkit
