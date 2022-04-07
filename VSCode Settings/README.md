@@ -8,6 +8,7 @@
     "editor.dragAndDrop": false, // disable the dumb mouse drag and drop feature
     "editor.fontFamily": "Consolas",
     "editor.fontSize": 14,
+    "python.analysis.autoImportCompletions": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
     "terminal.integrated.scrollback": 10000,
