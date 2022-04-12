@@ -617,6 +617,11 @@ sudo useradd josh
 sudo useradd -m josh
 ```
 
+### Create a user with a specific home directory:
+```
+sudo useradd -m josh -d /home/josh2
+```
+
 ### Create a user with a specific login shell:
 ```
 sudo useradd -s /usr/bin/zsh josh
