@@ -7,7 +7,7 @@ In simple terms, browsers enforce this to prevent malicious websites from perfor
 
 # The Basics:
 1. CORS stands for [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-2. CORS is required for the browser to send HTTP requests to another domain. An example of this is dashboard.acme.mil attempting to talk with rhcs.acme.mil
+2. CORS is required for the browser to send HTTP requests to another domain. An example of this is people.google.com attempting to talk with coffee.google.com
 3. There are two types of requests: [simple requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests), and [preflighted requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#preflighted_requests)
     * Simple requests are either GET/HEAD/POST and they must follow specific Content-Types
     * Preflighted requests cover all requests that don’t fall under the “simple requests” category and are a bit more convoluted
