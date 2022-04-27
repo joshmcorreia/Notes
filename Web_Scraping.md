@@ -3,4 +3,3 @@
 - https://github.com/scrapy/scrapy
 - https://www.geeksforgeeks.org/web-scraping-without-getting-blocked/
 - https://understandingdata.com/how-to-avoid-being-blocked-web-scraping/
-- 
