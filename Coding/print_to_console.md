@@ -20,6 +20,12 @@ Console.WriteLine(message);
 
 ### bash:
 ``` bash
-message="ok"
+message="Hello"
 echo $message
+```
+
+### PowerShell:
+```
+$message = "Hello"
+$message
 ```
