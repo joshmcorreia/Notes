@@ -32,6 +32,11 @@ echo $my_age
 ## Check that a file exists:
 [Source](https://stackoverflow.com/a/31881297)
 ```
+[System.IO.File]::Exists(/tmp/home/file.txt)
+> True
+```
+OR
+```
 Test-Path /tmp/home/file.txt -PathType Leaf
 > True
 ```
