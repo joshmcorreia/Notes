@@ -10,6 +10,16 @@ docker pull ubuntu
 docker pull ubuntu:focal
 ```
 
+### List your current docker images:
+```bash
+docker image ls
+```
+
+### Run a docker image:
+```bash
+docker run -it ubuntu:focal
+```
+
 ### List your current docker containers:
 ```bash
 docker container ls
@@ -19,3 +29,6 @@ docker container ls
 ```bash
 docker attach adoring_turing # where adoring_turing is the name of the docker container
 ```
+
+### Detach from a docker container:
+<kbd>CTRL</kbd>+<kbd>P</kbd>+<kbd>Q</kbd>
