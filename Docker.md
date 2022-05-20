@@ -1,5 +1,16 @@
 # Docker
 
+### What are Docker images?
+"A Docker image is a read-only template that contains a set of instructions for creating a container that can run on the Docker platform. It provides a convenient way to package up applications and preconfigured server environments" ([Source](https://jfrog.com/knowledge-base/a-beginners-guide-to-understanding-and-building-docker-images/))
+
+### What are Docker containers?
+Docker containers are running instances of Docker images. When you run an image, a container is created.
+
+### How are Docker containers different from VMs?
+- Docker containers do not contain their own kernel, so they use the kernel of the host Operating System. This allows Docker images to be much smaller than VMs. 
+- Docker containers are faster than VMs because you do not have to boot up the kernel and applications every time.
+- One of the drawbacks of using the kernel of the host OS is that the image may not be compatible, such as trying to run a Linux image on a Windows host OS.
+
 ### Download an existing Docker image:
 ```bash
 docker pull ubuntu
@@ -17,15 +28,60 @@ docker image ls
 
 ### Run a docker image:
 ```bash
-docker run -it ubuntu:focal
+docker run -it ubuntu:focal # -it stands for interactive
+```
+If you wish to name your docker container while running it:
+```bash
+docker run --name MyUbuntuContainer -it ubuntu:focal
+```
+
+### Start a docker container:
+```bash
+docker start MyUbuntuContainer
+```
+
+### Stop a docker container:
+Note: this is equivalent to sending a SIGTERM to the main process in the container
+```bash
+docker stop MyUbuntuContainer
+```
+
+### Kill a docker container:
+Note: this is equivalent to sending a SIGKILL to the main process in the container
+```bash
+docker kill MyUbuntuContainer
+```
+
+### Pause a docker container:
+```bash
+docker pause MyUbuntuContainer
+```
+
+### Unpause a docker container:
+```bash
+docker unpause MyUbuntuContainer
+```
+
+### Delete a docker image:
+```bash
+docker image rm ubuntu
+```
+
+### Delete a docker container:
+```bash
+docker rm MyUbuntuContainer
 ```
 
 ### List your current docker containers:
 ```bash
 docker container ls
 ```
+OR
+```bash
+docker ps
+```
 
-### Connect to an existing docker container:
+### Attach to a running docker container:
 ```bash
 docker attach adoring_turing # where adoring_turing is the name of the docker container
 ```
