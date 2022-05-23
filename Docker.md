@@ -92,3 +92,8 @@ docker attach adoring_turing # where adoring_turing is the name of the docker co
 
 ### Detach from a docker container:
 <kbd>CTRL</kbd>+<kbd>P</kbd>+<kbd>Q</kbd>
+
+### Copy files from a docker container to the host machine:
+```
+docker cp adoring_turing:/home/josh/file.txt .
+```
