@@ -66,6 +66,10 @@ docker unpause MyUbuntuContainer
 ```bash
 docker image rm ubuntu
 ```
+OR
+```bash
+docker rmi ubuntu
+```
 
 ### Delete a docker container:
 ```bash
