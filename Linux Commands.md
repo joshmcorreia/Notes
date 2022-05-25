@@ -230,6 +230,11 @@ ls -sh file.txt
 ls -lh /var/log/josh
 ```
 
+### Display disk usage:
+```
+du -sh /var/log/josh
+```
+
 ---
 
 # Find files:
