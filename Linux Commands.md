@@ -325,6 +325,20 @@ echo "text" >> file.txt
 
 ---
 
+# Compress files:
+
+### Tar a folder:
+```bash
+tar -czvf output_file.tar.gz /home/josh/folder_to_tar
+```
+
+### Untar a folder:
+```bash
+tar -xvf compressed_folder.tar.gz
+```
+
+---
+
 # Groups:
 
 ### Print out full group information:
