@@ -62,6 +62,14 @@ docker pause MyUbuntuContainer
 docker unpause MyUbuntuContainer
 ```
 
+### Snapshot a docker container:
+Note: committing a container saves it as a new image
+```bash
+docker commit {IMAGE_NAME} {NEW_SNAPSHOT_NAME}
+
+docker commit MyUbuntuContainer ubuntu_container_snapshot
+```
+
 ### Delete a docker image:
 ```bash
 docker image rm ubuntu
