@@ -1,17 +1,7 @@
+Note: This value can be found by typing `uname -m`
+
 # CPU Architectures
 
-`amd`
+`x86` - 32bit, emerged from the Intel 8086 processor.
 
-`x86` - 32bit
-
-`x64`
-
-`x86_64` - 64bit version of x86
-
-`amd64`
-
-`armhf` - ARM hard float
-
-`i386`
-
-`i686`
+`x86_64` / `x86-64` / `x64` / `amd64` - 64bit version of the x86 instruction set [Source](https://en.wikipedia.org/wiki/X86-64)
