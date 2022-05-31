@@ -35,6 +35,11 @@ If you wish to name your docker container while running it:
 docker run --name MyUbuntuContainer -it ubuntu:focal
 ```
 
+### Run a Docker image with a specific platform:
+```bash
+docker run --platform linux/arm/v7 -it ubuntu:focal
+```
+
 ### Start a docker container:
 ```bash
 docker start MyUbuntuContainer
@@ -104,4 +109,17 @@ docker attach adoring_turing # where adoring_turing is the name of the docker co
 ### Copy files from a docker container to the host machine:
 ```
 docker cp adoring_turing:/home/josh/file.txt .
+```
+
+---
+
+## Dockerfiles
+
+### Building Docker images from a Dockerfile:
+```bash
+docker build -f {DOCKERFILE} -t {DESIRED_IMAGE_NAME}:{DESIRED_TAG_NAME} .
+```
+Example:
+```bash
+docker build -f Dockerfile.build_x86_64 -t x86_64:latest .
 ```
