@@ -340,6 +340,20 @@ tar -czvf output_file.tar.gz /home/josh/folder_to_tar
 ### Untar a folder:
 ```bash
 tar -xvf compressed_folder.tar.gz
+
+tar -xvf compressed_folder.tar.gz -C /home/josh/output_folder
+```
+
+### Zip a folder:
+```bash
+zip -r output_file.zip /home/josh/folder_to_zip
+```
+
+### Unzip a folder:
+```bash
+unzip compressed_folder.zip
+
+unzip compressed_folder.zip -d /home/josh/output_folder
 ```
 
 ---
