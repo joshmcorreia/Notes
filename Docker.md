@@ -120,7 +120,7 @@ docker cp adoring_turing:/home/josh/file.txt .
 
 ---
 
-## Dockerfiles
+## Docker Image Creation
 
 ### Building Docker images from a Dockerfile:
 ```bash
@@ -129,4 +129,9 @@ docker build -f {DOCKERFILE} -t {DESIRED_IMAGE_NAME}:{DESIRED_TAG_NAME} .
 Example:
 ```bash
 docker build -f Dockerfile.build_x86_64 -t x86_64:latest .
+```
+
+### Viewing the size of each layer in an image:
+```bash
+docker history my_image
 ```
