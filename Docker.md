@@ -135,3 +135,6 @@ docker build -f Dockerfile.build_x86_64 -t x86_64:latest .
 ```bash
 docker history my_image
 ```
+
+### When to combine RUN commands:
+When commands are tightly connected, such as running `apt update` followed by the installation of a package, be sure to combine them into a single RUN command. This will ensure that the cache does not have old `apt update` information when installing the package. More information on this can be found [here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run).
