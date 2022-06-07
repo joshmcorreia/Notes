@@ -153,3 +153,8 @@ COPY --from=file_downloader /home/curluser/my_folder.zip /home/josh
 
 ### Cloning private repositories:
 When cloning private repositories it is unsafe to store a private key inside of your Docker image because attackers can re-use your private key to impersonate you. Instead of storing the private key in the Docker image, you can use the SSH mount type when building your image. More information can be found [here](https://docs.docker.com/develop/develop-images/build_enhancements/#using-ssh-to-access-private-data-in-builds).
+
+Make sure to add the ssh flag when building:
+```bash
+docker build --ssh default -f Dockerfile.build_x86_64 -t x86_64:latest .
+```
