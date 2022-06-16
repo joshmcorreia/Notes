@@ -158,3 +158,9 @@ Make sure to add the ssh flag when building:
 ```bash
 docker build --ssh default -f Dockerfile.build_x86_64 -t x86_64:latest .
 ```
+
+### Building build images in pipelines:
+A great way to speed up pipelines is by building your build images themselves. Basically you automate building the exact image that you need for building software in a pipeline in order to speed up each build process. For example if your build process relies on another Git project (call it Project-A), it makes more sense to build a new Docker image every time that Project-A changes and then use the newly created Docker image in your pipeline. This means that you won't need to `git pull` every time that your pipeline runs, which in turn saves time.
+
+Here is an article that talks about just this:
+- https://about.gitlab.com/blog/2019/08/28/building-build-images/
