@@ -7,7 +7,7 @@ Of course there is never a solution that works for all problems, but the "[succe
 The best explanation of tags that I've read is that a "tag is just an annotated pointer to a commit" ([Source](https://softwareengineering.stackexchange.com/a/165733)).
 
 ## Should you use tags on branches?
-In general I've found that it's best to only use tags on the branch that you release from, which is generally `master/main`. Since tags are applied to specific commits, if you delete a branch, that tag is deleted as well. When squashing commits during a merge you will also lose those tags, so even if you keep the branch around, that tag will not exist on the `main` branch.
+In general I've found that it's best to only use tags on the branch that you release from, which is generally `master/main`. Since tags are applied to specific commits, if you delete a branch, the tags on that branch are deleted as well. When squashing commits during a merge you will also lose those tags, so even if you keep the branch around, that tag will not exist on the `main` branch. Relevant resources [here](https://softwareengineering.stackexchange.com/questions/347525/should-a-release-branch-or-the-master-branch-be-tagged-when-the-gitflow-is-used) and [here](https://stackoverflow.com/questions/54281360/what-happens-to-tags-of-squashed-commits).
 
 ---
 
