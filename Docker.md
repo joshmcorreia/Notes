@@ -159,6 +159,8 @@ Make sure to add the ssh flag when building:
 docker build --ssh default -f Dockerfile.build_x86_64 -t x86_64:latest .
 ```
 
+I've experienced issues during the clone stage on macOS and had to run `ssh-add --apple-use-keychain`. [Source](https://superuser.com/a/1724438/)
+
 ### Running update/upgrade inside of Dockerfiles:
 When building Docker images, it's almost always a good idea to update the packages inside of the Dockerfile (ex: `apt-get update && apt-get upgrade`). This ensures that security vulnerabilities are fixed since you often cannot rely on the base image maintainer to frequently update the image. Relevant article [here](https://pythonspeed.com/articles/security-updates-in-docker/).
 
