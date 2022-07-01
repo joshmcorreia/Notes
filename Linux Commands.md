@@ -824,9 +824,14 @@ screen -ls
 ### Attach to a screen session:
 ```
 screen -r {screen_id_here}
-
+```
 Example:
+```
 screen -r 6438
+```
+or
+```
+screen -r LongDownload
 ```
 
 ### Detach from a screen session:
