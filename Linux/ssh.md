@@ -34,6 +34,16 @@ ssh josh@josh.test.com ls
 
 # Securing an SSH Server:
 
+### Disable root login:
+Edit `/etc/ssh/sshd_config` and add the following line:
+```
+PermitRootLogin no
+```
+Then restart the sshd service:
+```
+sudo systemctl restart ssh.service
+```
+
 ### Disable password authentication:
 **Note:** Make sure to set up SSH keys before doing this
 
