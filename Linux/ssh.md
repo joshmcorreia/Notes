@@ -29,3 +29,18 @@ ssh josh@josh.test.com
 ```
 ssh josh@josh.test.com ls
 ```
+
+---
+
+# Securing an SSH Server:
+
+### Disable password authentication:
+**Note:** Make sure to set up SSH keys before doing this
+
+Edit `/etc/ssh/sshd_config` and add the following line:
+```
+PasswordAuthentication no
+```
+
+### Change the default port:
+By default, SSH servers run on port 22. By changing the port to something else, port-scanners are a lot less likely to find your server. Make sure to use a port that isn't currently in use or reserved (should be able to use ports 1024-65535).
