@@ -41,6 +41,10 @@ Edit `/etc/ssh/sshd_config` and add the following line:
 ```
 PasswordAuthentication no
 ```
+Then restart the sshd service:
+```
+sudo systemctl restart ssh.service
+```
 
 ### Change the default port:
 By default, SSH servers run on port 22. By changing the port to something else, port-scanners are a lot less likely to find your server. Make sure to use a port that isn't currently in use or reserved (should be able to use ports 1024-65535).
