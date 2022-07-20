@@ -38,3 +38,6 @@ screen -XS {screen_id_here} quit
 Example:
 screen -XS 6438 quit
 ```
+
+### View history of a screen session over SSH:
+To view screen session history you have to enter copy mode which can be done by pressing <kbd>Ctrl</kbd>+<kbd>A</kbd> then <kbd>Esc</kbd> then using the up and down arrows to navigate the history. Pressing <kbd>Esc</kbd> again will exit copy mode and allow you to type normally again.
