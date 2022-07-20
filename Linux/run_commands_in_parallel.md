@@ -3,3 +3,8 @@ To accomplish running multiple commands in parallel in the terminal, you're able
 ```
 sleep 5 & sleep 5 &
 ```
+
+Here's an example that makes it clear that both commands execute at the same time:
+```
+(sleep 5 && echo "hello1") & (sleep 5 && echo "hello2") &
+```
