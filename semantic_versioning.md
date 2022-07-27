@@ -12,3 +12,12 @@ These are the rules that I find particularly important to follow and reference:
 1. For a version number X.Y.Z, X/Y/Z must be non-negative integers and should not contain leading zeroes. This means that the version `0.0.1` is valid, while the version `0.0.01` is not.
 2. Once a versioned package has been released, the contents of that version MUST NOT be modified.
 3. Prefixing a version number with "v" is not semantic versioning.
+
+---
+
+# Combining Semantic Versioning with Git Tagging:
+There is a [great video](https://www.youtube.com/watch?v=4wPjo5C-v8Y) which covers this, but some overall points to be aware of are as follows:
+1. Name annotated tags with semantic version numbers. For example, if you are releasing version 1.4.6, you would create a Git tag annotated `v1.4.6` and the message would be `Release 1.4.6`
+  ```
+  git tag -a v1.4.6 -m "Release 1.4.6"
+  ```
