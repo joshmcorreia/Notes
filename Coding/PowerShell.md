@@ -76,8 +76,8 @@ Measure-Command {echo hi | Out-Default}
 ```
 The output from the `Measure-Command` is quite ugly compared to the output from the `time` command on Linux, so [here's a command](https://stackoverflow.com/a/17815328) that provides more useful output:
 ```
-Measure-Command {echo hi} | select @{n="time";e={$_.Minutes,"Minutes",$_.Seconds,"Seconds",$_.Milliseconds,"Milliseconds" -join " "}}
+Measure-Command {echo hi} | select @{n="time";e={$_.Hours,"Hours",$_.Minutes,"Minutes",$_.Seconds,"Seconds",$_.Milliseconds,"Milliseconds" -join " "}}
 > time
 > ----
-> 0 Minutes 0 Seconds 10 Milliseconds
+> 0 Hours 0 Minutes 0 Seconds 10 Milliseconds
 ```
