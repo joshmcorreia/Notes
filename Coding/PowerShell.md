@@ -41,6 +41,17 @@ Test-Path /tmp/home/file.txt -PathType Leaf
 > True
 ```
 
+## Print out the current time:
+```
+Get-Date
+> Friday, July 29, 2022 4:16:26 PM
+```
+OR
+```
+Get-Date -Format u
+> 2022-07-29 16:16:58Z
+```
+
 ## Time how long a command takes:
 [Source](https://stackoverflow.com/a/4801509)
 ```
