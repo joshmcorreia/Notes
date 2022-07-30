@@ -4,6 +4,16 @@ A list of useful database commands.
 # SQL:
 Note: SQL commands are not case sensitive; `CREATE` is the same as `create`
 
+### Create a database user:
+```
+CREATE USER 'josh'@'localhost' IDENTIFIED BY 'my_new_password';
+```
+
+### Set a database user password:
+```
+SET PASSWORD FOR 'josh'@'localhost' = 'my_new_password';
+```
+
 ### Create a database:
 ```
 CREATE DATABASE my_project;
