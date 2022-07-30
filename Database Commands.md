@@ -19,6 +19,11 @@ SET PASSWORD FOR 'josh'@'localhost' = 'my_new_password';
 CREATE DATABASE my_project;
 ```
 
+### List all databases:
+```
+SHOW DATABASES;
+```
+
 ### Use/open a database:
 ```
 USE my_project;
