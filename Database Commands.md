@@ -48,6 +48,18 @@ or
 TRUNCATE People;
 ```
 
+### Create a table:
+[Source](https://www.w3schools.com/mysql/mysql_create_table.asp)
+```
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+```
+
 ### Delete a table:
 ```
 DROP People;
