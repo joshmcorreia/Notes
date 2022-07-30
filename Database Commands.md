@@ -81,6 +81,12 @@ Note: This is similar to an UPDATE except it won't error out if the row doesn't 
 REPLACE INTO table_name (column1, column2) VALUES (value1, value2);
 ```
 
+### Change column data type:
+[Source](https://stackoverflow.com/questions/1356866/how-do-i-change-the-data-type-for-a-column-in-mysql)
+```
+ALTER TABLE tablename MODIFY columnname INTEGER;
+```
+
 ### Add constraints/validation to fields in a table:
 Note: the `CHECK` field needs to be added at the end of the table, it can't be in the middle
 ```
