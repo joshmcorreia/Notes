@@ -92,3 +92,9 @@ Measure-Command {echo hi} | select @{n="time";e={$_.Hours,"Hours",$_.Minutes,"Mi
 > ----
 > 0 Hours 0 Minutes 0 Seconds 10 Milliseconds
 ```
+
+## Determine if you're in PowerShell or CMD:
+[Source](https://stackoverflow.com/a/61469226)
+```
+(dir 2>&1 *`|echo CMD);&<# rem #>echo ($PSVersionTable).PSEdition
+```
