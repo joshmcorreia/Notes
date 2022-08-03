@@ -121,6 +121,14 @@ git remote add origin git@bitbucket.org:josh/josh.git
 ```
 git remote prune origin
 ```
+
+## Force LF line endings on Windows:
+[Source](https://stackoverflow.com/a/13154031)
+```
+git config --global core.autocrlf false
+git config --global core.eol lf
+```
+
 ---
 
 # Tags:
