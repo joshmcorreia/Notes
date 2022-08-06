@@ -65,6 +65,11 @@ CREATE TABLE Persons (
 DROP People;
 ```
 
+### Add fields to a table:
+```
+ALTER TABLE table_name ADD COLUMN has_car BOOLEAN AFTER age;
+```
+
 ### Add to a table:
 ```
 INSERT INTO table_name (column1, column2) VALUES (value1, value2);
