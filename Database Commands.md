@@ -4,6 +4,11 @@ A list of useful database commands.
 # SQL:
 Note: SQL commands are not case sensitive; `CREATE` is the same as `create`
 
+### Connect to a MySQL server:
+```
+mysql -u root -h 192.168.0.1
+```
+
 ### Create a database user:
 ```
 CREATE USER 'josh'@'localhost' IDENTIFIED BY 'my_new_password';
