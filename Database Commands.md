@@ -6,7 +6,11 @@ Note: SQL commands are not case sensitive; `CREATE` is the same as `create`
 
 ### Connect to a MySQL server:
 ```
-mysql -u root -h 192.168.0.1
+mysql -u root -h 192.168.0.1 -p
+```
+OR
+```
+mysql -u root -h 192.168.0.1 --port=3306 -p
 ```
 
 ### Create a database user:
