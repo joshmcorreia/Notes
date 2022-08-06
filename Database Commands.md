@@ -79,6 +79,11 @@ DROP People;
 ALTER TABLE table_name ADD COLUMN has_car BOOLEAN AFTER age;
 ```
 
+### Change column type:
+```
+ALTER TABLE table_name MODIFY has_car VARCHAR(255);
+```
+
 ### Add to a table:
 ```
 INSERT INTO table_name (column1, column2) VALUES (value1, value2);
