@@ -34,3 +34,10 @@ Bad Example:
 ```
 calculator.add("1001")
 ```
+
+---
+
+## Avoid Logic in Tests
+Keep your tests simple. Logic should exist in the code being tested, not in the test code. Introducing logic into the test code can introduce bugs and indicate that you should instead be breaking up your test case into multiple different tests.
+
+Avoid using logical conditions such as `if`, `while`, `for`, `switch`, etc.
