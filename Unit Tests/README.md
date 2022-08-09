@@ -18,3 +18,19 @@
 - **Assert** that something is as expected.
 
 Make sure each one of these is on a separate line for readability, don't try to put them all on one line to shorten how many lines of code there are.
+
+---
+
+## Avoid Magic Strings
+Always label strings/values when testing edge cases. It makes it much easier for reviewers and people working on the project in the future to understand why certain tests exist and what edge cases to be aware of.
+
+Good Example:
+```
+MAXIMUM_RESULT = "1001"
+calculator.add(MAXIMUM_RESULT)
+```
+
+Bad Example:
+```
+calculator.add("1001")
+```
