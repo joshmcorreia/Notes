@@ -118,6 +118,17 @@ docker attach adoring_turing # where adoring_turing is the name of the docker co
 docker cp adoring_turing:/home/josh/file.txt .
 ```
 
+### Remove all images that aren't used by existing containers:
+```
+docker image prune -a
+```
+[Source](https://docs.docker.com/config/pruning/)
+
+### Remove unused containers:
+```
+docker container prune
+```
+
 ---
 
 ## Docker Image Creation
