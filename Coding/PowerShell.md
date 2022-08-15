@@ -52,6 +52,18 @@ Get-Date -Format u
 > 2022-07-29 16:16:58Z
 ```
 
+## Zip a folder:
+[Source](https://stackoverflow.com/a/29284372)
+```
+Compress-Archive -Path C:\stuff -DestinationPath stuff.zip
+```
+
+## Unzip a file:
+[Source](https://stackoverflow.com/a/27771099)
+```
+Expand-Archive C:\stuff.zip -DestinationPath C:\stuff
+```
+
 ## Time how long a command takes:
 [Source](https://stackoverflow.com/a/4801509)
 ```
