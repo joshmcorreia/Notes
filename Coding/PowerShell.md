@@ -29,6 +29,12 @@ $my_age = 5
 echo $my_age
 ```
 
+## If statement:
+```
+$exit_code = 1
+if ($exit_code -ne 0) { echo "ERROR"; return 1}
+```
+
 ## Check that a file exists:
 [Source](https://stackoverflow.com/a/31881297)
 ```
