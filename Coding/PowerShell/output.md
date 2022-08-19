@@ -18,4 +18,6 @@ echo $VERSION # this is never hit if the `python3 get_version.py` command return
 ```
 
 **Does always work:**
-The way that I get around this on Linux doesn't seem to work on Window. I have yet to find a solution. :(
+```
+The way that I get around this on Linux doesn't seem to work on Windows. I have yet to find a solution. :(
+```
