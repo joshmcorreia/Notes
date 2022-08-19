@@ -19,5 +19,8 @@ echo $VERSION # this is never hit if the `python3 get_version.py` command return
 
 **Does always work:**
 ```
-The way that I get around this on Linux doesn't seem to work on Windows. I have yet to find a solution. :(
+python3 get_version.py | Tee-Object -Variable VERSION
+> 1.0.0
+$VERSION
+> 1.0.0
 ```
