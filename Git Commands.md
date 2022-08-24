@@ -60,6 +60,14 @@ git checkout -b new_branch_name
 git push origin new_branch_name
 ```
 
+## Back up a branch
+```
+git checkout my_branch # check out the branch you want to back up
+git checkout -b my_branch_backup # back up the branch
+git checkout my_branch # switch back to the branch you backed up
+```
+[Source](https://docs.gitlab.com/ee/topics/git/git_rebase.html#git-rebase)
+
 ## Delete all local branches except master ([Source](https://stackoverflow.com/a/58139363))
 ```
 git branch | grep -v "master" | xargs git branch -D
