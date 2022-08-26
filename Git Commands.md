@@ -50,6 +50,11 @@ git stash pop
 git stash clear
 ```
 
+## Get the hash of the current commit ([Source](https://stackoverflow.com/a/949391))
+```
+git rev-parse HEAD
+```
+
 ## Create a branch
 ```
 git checkout -b new_branch_name
@@ -176,9 +181,19 @@ git tag -d 1.0
 git push --delete origin YOUR_TAG_NAME
 ```
 
-## Get the latest tag for the current branch ([Source](https://stackoverflow.com/a/12791414))
+## Get the latest tag for the current branch ([Source](https://stackoverflow.com/a/7261049))
 ```
 git describe --tags --abbrev=0
+```
+
+## Get the latest tag across all branches ([Source](https://stackoverflow.com/a/7979255))
+```
+git describe --tags $(git rev-list --tags --max-count=1)
+```
+
+## Get the latest annotated tag ([Source](https://stackoverflow.com/a/7261049))
+```
+git describe --abbrev=0
 ```
 
 ## Check out a specific tag ([Source](https://stackoverflow.com/a/35979751))
