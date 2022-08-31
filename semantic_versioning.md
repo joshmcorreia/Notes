@@ -21,3 +21,8 @@ There is a [great video](https://www.youtube.com/watch?v=4wPjo5C-v8Y) which cove
   ```
   git tag -a v1.4.6 -m "Release 1.4.6"
   ```
+
+---
+
+# Using Semantic Versioning with build numbers
+I found [this StackExchange post](https://softwareengineering.stackexchange.com/questions/426632/how-to-deal-with-semver-in-a-build-number-based-company) to be useful.
