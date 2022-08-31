@@ -1,6 +1,8 @@
 # Semantic Versioning:
 When versioning software, I like to follow [semantic versioning](https://github.com/semver/semver/blob/master/semver.md).
 
+[Here](https://jubianchi.github.io/semver-check/#/) is a fancy online semantic versioning checker that someone wrote to help visualize what incrementing a semantic version looks like.
+
 ## Semantic versioning summary:
 Given a version number MAJOR.MINOR.PATCH, increment the:
 1. MAJOR version when you make incompatible API changes
@@ -26,3 +28,11 @@ There is a [great video](https://www.youtube.com/watch?v=4wPjo5C-v8Y) which cove
 
 # Using Semantic Versioning with build numbers
 I found [this StackExchange post](https://softwareengineering.stackexchange.com/questions/426632/how-to-deal-with-semver-in-a-build-number-based-company) to be useful.
+
+Semantic versioning v2 rules state that build metadata can be included by appending a plus sign to the patch version, followed by additional build information. It is important to note that build metadata is ignored when determining precedence, so the builds `1.2.3+0001` and `1.2.3+9999` have the same precedence.
+
+Example:
+```
+# version 1.2.3, build number 6789
+1.2.3+6789
+```
