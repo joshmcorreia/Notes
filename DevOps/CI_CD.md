@@ -12,6 +12,16 @@
 [Source](https://aws.amazon.com/devops/continuous-integration/)
 > With continuous integration, developers frequently commit to a shared repository using a version control system such as Git. Prior to each commit, developers may choose to run local unit tests on their code as an extra verification layer before integrating. A continuous integration service automatically builds and runs unit tests on the new code changes to immediately surface any errors.
 
+### How do you code review with Continuous Integration?
+[This answer](https://softwareengineering.stackexchange.com/a/121665) points out something important:
+> a good point could be made that 'why bother reviewing if the CI test automation hasn't run on it?', so perhaps the best would be to give developers each a private branch that the CI server will build and test for them. That way they first commit and push there, then once it passes get it reviewed, then merge to mainline (where it will get another run through the CI server).
+
+From personal experience I have found this to be important.
+1. Developer writes code on a feature branch
+2. Every time code is commited, CI runs on that branch and ensures that the code builds properly. If the code does not build properly then that developer will have to make another commit which fixes the issue(s)
+3. When the developer is done with their branch, they make a merge request
+4. Other developers review the merge request, only after the pipelines successfully complete. This ensures that other developers are not wasting their time reviewing code that is incorrect. Reviewers should check for things that are harder to detect via automation, such as ensuring best practices are followed or ensuring that security vulnerabilities are not introduced.
+
 ---
 
 # Continuous Delivery
