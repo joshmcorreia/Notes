@@ -53,6 +53,10 @@ git stash clear
 ## Get the hash of the current commit ([Source](https://stackoverflow.com/a/949391))
 ```
 git rev-parse HEAD
+> 1ed246bc3e3159d1339886c004c37c11b47e37cd
+
+git rev-parse --short HEAD
+> 1ed246bc
 ```
 
 ## Create a branch
