@@ -177,6 +177,15 @@ git tag v1.2 9fceb02
 git tag -a v1.2 9fceb02 -m "Version 1.2 release"
 ```
 
+## Push a tag to remote ([Source](https://stackoverflow.com/a/5195913))
+```
+git push origin <tag_name>
+
+Example:
+git tag v1.2
+git push origin v1.2
+```
+
 ## Delete a local tag
 ```
 git tag -d 1.0
