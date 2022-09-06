@@ -166,13 +166,15 @@ git tag
 ## Tag the latest commit
 ```
 git tag v1.2
+
+git tag -a v1.2 -m "Version 1.2 release"
 ```
 
 ## Tag a specific commit ([Source](https://stackoverflow.com/a/4404197))
 ```
 git tag v1.2 9fceb02
 
-git tag -a v1.2 9fceb02 -m "Message here"
+git tag -a v1.2 9fceb02 -m "Version 1.2 release"
 ```
 
 ## Delete a local tag
