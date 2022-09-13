@@ -14,5 +14,5 @@ This will run the specified job during a successful merge request event, meaning
 GitLab does not currently have a built-in trigger to check when a merge request succeeds, but this can be accomplished by checking the target branch and whether or not the commit was a push. [Source](https://stackoverflow.com/a/63893810)
 ```
 rules:
-    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_BUILD_REF_NAME == "master"'
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == "master"'
 ```
