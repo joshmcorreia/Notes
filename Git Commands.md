@@ -69,6 +69,12 @@ git checkout -b new_branch_name
 git push origin new_branch_name
 ```
 
+## Overwrite a remote branch
+```
+git push origin newBranch:oldBranch
+```
+[Source](https://stackoverflow.com/a/39389793)
+
 ## Back up a branch
 ```
 git checkout my_branch # check out the branch you want to back up
