@@ -38,3 +38,7 @@ The second solution involves using the [`interruptible`](https://docs.gitlab.com
 ### Handling Manually Cancelled Jobs
 Unfortunately the only solution to this currently involves telling users to not cancel jobs. It sucks, but that's the best we've got, at least until GitLab decides to fix the tickets listed above.
 
+## Prevent Merges That Are Behind On Commits
+To prevent merges that break code and mess up the Git history, it is important to block merges until the branch-to-be-merged is up to date with the branch that it will be merged into.
+
+TODO: relevant post [here](https://stackoverflow.com/questions/45015210)
