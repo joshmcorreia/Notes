@@ -118,6 +118,12 @@ docker attach adoring_turing # where adoring_turing is the name of the docker co
 docker cp adoring_turing:/home/josh/file.txt .
 ```
 
+### Copy files from the host machine to a docker container:
+```
+docker cp foo.txt container_id:/foo.txt
+```
+[Source](https://stackoverflow.com/a/31971697)
+
 ### Remove all images that aren't used by existing containers:
 ```
 docker image prune -a
