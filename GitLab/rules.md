@@ -39,6 +39,8 @@ The second solution involves using the [`interruptible`](https://docs.gitlab.com
 Unfortunately the only solution to this currently involves telling users to not cancel jobs. It sucks, but that's the best we've got, at least until GitLab decides to fix the tickets listed above.
 
 ## Prevent Merges That Are Behind On Commits
-To prevent merges that break code and mess up the Git history, it is important to block merges until the branch-to-be-merged is up to date with the branch that it will be merged into.
+To prevent merges that break code and mess up the Git history, it is important to block merges until the branch-to-be-merged is up to date with the branch that it will be merged into. The documentation on this can be found [here](https://gitlab.optimusprime.ai/help/user/project/merge_requests/methods/index.md#merge-commit-with-semi-linear-history).
 
-TODO: relevant post [here](https://stackoverflow.com/questions/45015210)
+To enable this setting, go to `Settings -> General -> Merge Requests -> Merge method -> "Merge commit with semi-linear history"`
+
+> Every merge creates a merge commit. Merging is only allowed when the source branch is up-to-date with its target. When semi-linear merge is not possible, the user is given the option to rebase.
