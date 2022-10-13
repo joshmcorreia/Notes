@@ -32,6 +32,28 @@ Resource blocks contain arguments which you use to configure the resource. Argum
 
 ---
 
+## Commands
+
+### `terraform init`
+Initializes the backend and provider plugins
+
+### `terraform fmt`
+Formats the terraform configuration file for consistency and readability
+
+### `terraform validate`
+Validates the configuration file
+
+### `terraform apply`
+Prints out the execution plan and then deploys it if the user approves it
+
+### `terraform show`
+Inspects the current state of the terraform resources
+
+### `terraform destroy`
+Tears down the managed infrastructure. This cannot be undone.
+
+---
+
 ## Tutorials
 HashiCorp's tutorial can be found [here](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
