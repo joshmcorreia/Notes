@@ -52,6 +52,50 @@ pip3 install -U coloredlogs
 
 ---
 
+# apt
+
+### List the package info of a specific package
+```
+apt info gcc
+```
+
+### List all dependencies of a package
+```
+apt-cache rdepends gcc
+```
+
+### List all installed packages
+```
+apt list --installed
+```
+
+### List all installed packages containing the specified string
+```
+apt list --installed | grep gcc
+```
+
+### Install a package
+```
+apt install gcc
+```
+
+### Uninstall a package
+```
+apt remove gcc
+```
+
+### Update all packages to the latest version
+```
+
+```
+
+### Update a specific package to the latest version
+```
+
+```
+
+---
+
 # dnf (Dandified YUM)
 
 ### List the package info of a specific package:
