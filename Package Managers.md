@@ -59,9 +59,14 @@ pip3 install -U coloredlogs
 apt info gcc
 ```
 
-### List all dependencies of a package
+### List all packages that depend on the specified package
 ```
 apt-cache rdepends gcc
+```
+
+### List all dependencies of a package
+```
+apt-cache depends gcc
 ```
 
 ### List all installed packages
@@ -84,14 +89,19 @@ apt install gcc
 apt remove gcc
 ```
 
-### Update all packages to the latest version
+### Fetch the list of available updates
+```
+apt update
 ```
 
+### Update all packages to the latest version
+```
+apt upgrade
 ```
 
 ### Update a specific package to the latest version
 ```
-
+apt install --only-upgrade gcc
 ```
 
 ---
