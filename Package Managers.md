@@ -192,7 +192,7 @@ rpm -ql gcc
 
 ### Install a package
 ```
-rpm -i gcc
+rpm -ivh gcc
 ```
 
 ### Install a package and its dependencies
