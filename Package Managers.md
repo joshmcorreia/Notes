@@ -215,7 +215,7 @@ rpm -e gcc
 
 ### Update a specific package to the latest version
 ```
-rpm -U gcc
+rpm -Uvh gcc
 ```
 
 ---
