@@ -84,6 +84,11 @@ apt list --installed | grep gcc
 apt install gcc
 ```
 
+### Install a package and its dependencies
+```
+
+```
+
 ### Uninstall a package
 ```
 apt remove gcc
@@ -132,6 +137,9 @@ dnf list | grep gcc
 ```
 dnf install gcc
 ```
+
+### Install a package and its dependencies
+`dnf` doesn't have any special flags for this, you will automatically be prompted to install dependencies when installing a package
 
 ### Uninstall a package
 ```
@@ -187,6 +195,9 @@ rpm -ql gcc
 rpm -i gcc
 ```
 
+### Install a package and its dependencies
+`rpm` does not have a built-in way to manage dependencies. You will need to use either `dnf` or `yum` to automatically install dependencies
+
 ### Uninstall a package
 ```
 rpm -e gcc
@@ -237,6 +248,11 @@ npm -g ls | grep 'beautify'
 ### Install a package
 ```
 npm -g install puppeteer
+```
+
+### Install a package and its dependencies
+```
+
 ```
 
 ### Uninstall a package
@@ -291,6 +307,11 @@ yarn list | grep 'babel'
 ### Install a package
 ```
 yarn add puppeteer
+```
+
+### Install a package and its dependencies
+```
+
 ```
 
 ### Uninstall a package
