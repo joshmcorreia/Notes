@@ -126,6 +126,16 @@ echo "text" >> file.txt
 
 ---
 
+# File creation:
+
+### Create a file of arbitrary size
+[Source](https://ostechnix.com/create-files-certain-size-linux/)
+```
+head -c 5MB /dev/urandom > test_5mb_file.txt
+```
+
+---
+
 # File ownership/permissions:
 
 ### Set file permissions:
