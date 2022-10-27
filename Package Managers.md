@@ -157,6 +157,20 @@ dnf upgrade
 dnf upgrade gcc
 ```
 
+### List all repos
+```
+dnf repolist
+
+dnf repolist --enabled
+
+dnf repolist --disabled
+```
+
+### Disable a repo
+```
+dnf config-manager --set-disabled repository
+```
+
 ---
 
 # rpm (RPM Package Manager)
