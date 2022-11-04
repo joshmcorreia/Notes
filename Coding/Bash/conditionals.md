@@ -58,3 +58,13 @@ if ! [ -x "$(command -v git)" ]; then
   exit 1
 fi
 ```
+
+## Check if the sudo password has been entered for a terminal session
+[Source](https://askubuntu.com/a/357222)
+```
+if sudo -n true 2>/dev/null; then 
+    echo "I got sudo"
+else
+    echo "I don't have sudo"
+fi
+```
