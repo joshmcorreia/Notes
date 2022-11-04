@@ -29,6 +29,14 @@ fi
 ## Check if a file exists
 [Source](https://stackoverflow.com/a/638980)
 ```
+if [ -f /tmp/foo.txt ]; then
+    echo "File found!"
+fi
+```
+
+## Check if a file does not exist
+[Source](https://stackoverflow.com/a/638980)
+```
 if [ ! -f /tmp/foo.txt ]; then
     echo "File not found!"
 fi
