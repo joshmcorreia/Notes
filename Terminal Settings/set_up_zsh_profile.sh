@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Tested on the following:
+# Ubuntu 20.04 (root and non-root user)
+# Linux Mint (non-root user)
+# Docker ubuntu:focal (root user)
+# Docker ubuntu:jammy (root user)
+
 set -e
 
 username=$(whoami)
