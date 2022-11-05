@@ -14,7 +14,11 @@ install_zsh() {
     echo "Installing 'zsh'..."
 
     if [ -x "$(command -v apt)" ]; then
-        sudo apt install zsh
+        if [ "$username" = "root" ]; then
+            apt install -y zsh
+        else
+            sudo apt install -y zsh
+        fi
         echo -e "Successfully installed 'zsh'\n"
         return
     fi
@@ -56,8 +60,16 @@ download_zshrc() {
         return
     fi
 
-    echo "ERROR: Unable to download '.zshrc' because neither 'curl' nor 'wget' were found on the system"
-    exit 1
+    echo "Unable to find either 'curl' or 'wget'"
+    echo "Installing 'curl'..."
+    if [ "$username" = "root" ]; then
+        apt install -y curl
+    else
+        sudo apt install -y curl
+    fi
+    echo -e "Successfully installed curl\n"
+
+    download_zshrc
 }
 
 move_zshrc_file() {
