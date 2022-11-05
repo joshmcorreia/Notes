@@ -48,14 +48,14 @@ download_zshrc() {
 
     if [ -x "$(command -v curl)" ]; then
         echo "'curl' found, using curl to download '.zshrc'..." >&2
-        curl -s https://raw.githubusercontent.com/joshmcorreia/Notes/main/Terminal%20Settings/.zshrc -o zshrc.tmp
+        curl https://raw.githubusercontent.com/joshmcorreia/Notes/main/Terminal%20Settings/.zshrc -o zshrc.tmp
         echo -e "Successfully downloaded '.zshrc'\n"
         return
     fi
 
     if [ -x "$(command -v wget)" ]; then
         echo "'wget' found, using wget to download '.zshrc'..." >&2
-        wget -q https://raw.githubusercontent.com/joshmcorreia/Notes/main/Terminal%20Settings/.zshrc -O zshrc.tmp
+        wget https://raw.githubusercontent.com/joshmcorreia/Notes/main/Terminal%20Settings/.zshrc -O zshrc.tmp
         echo -e "Successfully downloaded '.zshrc'\n"
         return
     fi
