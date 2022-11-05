@@ -5,6 +5,7 @@
 # Linux Mint (non-root user)
 # Docker ubuntu:focal (root user)
 # Docker ubuntu:jammy (root user)
+# Docker rockylinux:8.6 (root user)
 
 set -e
 
@@ -18,6 +19,16 @@ install_zsh() {
     fi
 
     echo "Installing 'zsh'..."
+
+    if [ -x "$(command -v dnf)" ]; then
+        if [ "$username" = "root" ]; then
+            dnf install -y zsh
+        else
+            sudo dnf install -y zsh
+        fi
+        echo -e "Successfully installed 'zsh'\n"
+        return
+    fi
 
     if [ -x "$(command -v apt)" ]; then
         if [ "$username" = "root" ]; then
@@ -34,19 +45,34 @@ install_zsh() {
         echo -e "Successfully installed 'zsh'\n"
         return
     fi
+
+    echo "ERROR: This script does not currently support your package manager"
+    exit 1
 }
 
 change_user_shell() {
     echo "Changing the current user's shell..."
 
     # change the user's shell with sudo if they are already logged so they don't have to input their password
-    if sudo -n true 2>/dev/null; then
-        sudo chsh -s /bin/zsh $username
-    else
-        chsh -s /bin/zsh
+    if [ -x "$(command -v chsh)" ]; then
+        if sudo -n true 2>/dev/null; then
+            sudo chsh -s /bin/zsh $username
+        else
+            chsh -s /bin/zsh
+        fi
+        echo -e "Successfully changed the current user's shell\n"
+        return
     fi
 
-    echo -e "Successfully changed the current user's shell\n"
+    # support Rocky Linux/RHEL which don't come with chsh by default
+    if [ -x "$(command -v usermod)" ]; then
+        usermod -s /bin/zsh $username
+        echo -e "Successfully changed the current user's shell\n"
+        return
+    fi
+
+    echo "ERROR: Unable to find 'chsh' or 'usermod'!"
+    exit 1
 }
 
 download_zshrc() {
