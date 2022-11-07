@@ -1,6 +1,18 @@
 # Bash Conditionals
 
-## String Equality
+## Check if a variable is equal to an integer
+``` bash
+age=23
+if [ "$age" -eq 23 ]; then echo "Nobody likes you when you're 23"; fi
+```
+
+## Check if a variable is not equal to an integer
+``` bash
+age=23
+if [ "$age" -ne 23 ]; then echo "You're not even 23"; fi
+```
+
+## Check if a variable is equal to a string
 [Source](https://stackoverflow.com/a/2237103)
 ``` bash
 name="josh"
@@ -8,7 +20,14 @@ if [ "$name" = "josh" ]; then echo "Hello Josh"; fi
 > Hello Josh
 ```
 
-## Combining Multiple If Statements
+## Check if a variable is not equal to a string
+``` bash
+name="john"
+if [ "$name" != "josh" ]; then echo "Hello not-Josh"; fi
+> Hello not-Josh
+```
+
+## Combining multiple if statements
 [Source](https://stackoverflow.com/a/23543261)
 ``` bash
 first="josh"
