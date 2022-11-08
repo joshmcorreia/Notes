@@ -1,0 +1,6 @@
+# Put the following file in ~/.ssh/config
+
+```
+Host *
+  ConnectTimeout 5
+```
