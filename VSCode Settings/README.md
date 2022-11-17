@@ -6,14 +6,11 @@
 {
     "editor.renderWhitespace": "all",
     "editor.dragAndDrop": false, // disable the dumb mouse drag and drop feature
-    "editor.fontFamily": "Consolas",
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "python.analysis.autoImportCompletions": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
     "terminal.integrated.scrollback": 10000,
-    "terminal.integrated.fontFamily": "Consolas",
-    "terminal.integrated.fontSize": 14,
     "git.openDiffOnClick": false,
     "git.showInlineOpenFileAction": true,
     "workbench.colorCustomizations" : {
@@ -27,16 +24,20 @@
         "editor.tabSize": 4,
         "editor.insertSpaces": false,
         "editor.detectIndentation":false
-    }
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "editor.minimap.enabled": false
 }
 ```
 
 ---
-<kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> and click `Open Keyboard Shortcuts (JSON)`
+<kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> and click `Preferences: Open Keyboard Shortcuts (JSON)`
 
 `keybindings.json`:
 ```
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "shift+enter",
