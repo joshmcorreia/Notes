@@ -130,6 +130,11 @@ git rebase -i HEAD~x # where x is the number of commits back that you want to ed
 git push --force-with-lease
 ```
 
+## Copy a specific file from one branch to your current branch ([Source](https://stackoverflow.com/a/307872))
+```
+git checkout other_branch my_file.txt
+```
+
 ## Get remote url
 ```
 git config --get remote.origin.url
