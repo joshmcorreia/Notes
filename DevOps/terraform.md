@@ -54,6 +54,18 @@ Tears down the managed infrastructure. This cannot be undone.
 
 ---
 
+## Terraform Linting
+
+[`tflint`](https://github.com/terraform-linters/tflint)
+
+---
+
+## Terraform Security Scanner
+
+[`tfsec`](https://github.com/aquasecurity/tfsec)
+
+---
+
 ## Tutorials
 HashiCorp's tutorial can be found [here](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
