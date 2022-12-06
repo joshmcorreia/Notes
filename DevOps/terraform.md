@@ -67,7 +67,7 @@ Tears down the managed infrastructure. This cannot be undone.
 ---
 
 ## Tutorials
-HashiCorp's tutorial can be found [here](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+HashiCorp's tutorial can be found [here](https://developer.hashicorp.com/terraform/tutorials/)
 
 ### AWS Tutorial
-HashiCorp's AWS tutorial can be found [here](https://learn.hashicorp.com/tutorials/terraform/aws-build)
+HashiCorp's AWS tutorial can be found [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
