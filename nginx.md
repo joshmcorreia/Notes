@@ -1,11 +1,15 @@
 # nginx Configurations
 
 ## Remove the default nginx homepage
+[Source](https://stackoverflow.com/a/44360897)
+
 ```
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
 ## Redirect HTTP traffic to HTTPS
+[Source](https://serversforhackers.com/c/redirect-http-to-https-nginx)
+
 Add the following to `/etc/nginx/sites-available/mysite.com`
 ```
 server {
@@ -24,6 +28,6 @@ Add the following inside of a server block in `/etc/nginx/sites-available/mysite
 ```
 # redirects all traffic on /dashboard back to root /
 location = /dashboard {
-      return 301 /;
- }
+    return 301 /;
+}
 ```
