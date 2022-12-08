@@ -16,3 +16,12 @@ server {
     return 301 https://$host$request_uri;
 }
 ```
+
+## Redirect from a subdirectory to root
+Add the following inside of a server block in `/etc/nginx/sites-available/mysite.com`
+```
+# redirects all traffic on /dashboard back to root /
+location = /dashboard {
+      return 301 /;
+ }
+```
