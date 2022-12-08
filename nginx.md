@@ -18,6 +18,8 @@ server {
 ```
 
 ## Redirect from a subdirectory to root
+[Source](https://serverfault.com/a/816262)
+
 Add the following inside of a server block in `/etc/nginx/sites-available/mysite.com`
 ```
 # redirects all traffic on /dashboard back to root /
