@@ -96,3 +96,15 @@ sudo salt '*' cmd.run 'ls -l /etc'
 ```
 sudo salt '*' pkg.install vim
 ```
+
+---
+
+# Salt Cloud/Saltify
+[Documentation](https://docs.saltproject.io/en/latest/topics/cloud/saltify.html)
+
+### Master Install
+```
+curl -o bootstrap-salt.sh -L https://bootstrap.saltproject.io
+chmod +x bootstrap-salt.sh
+sudo ./bootstrap-salt.sh -MNL
+```
