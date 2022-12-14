@@ -3,8 +3,8 @@
 ---
 
 ## Documentation
-[Install Salt Cloud](https://docs.saltproject.io/en/latest/topics/cloud/install/index.html)
-[Getting Started with Saltify](https://docs.saltproject.io/en/latest/topics/cloud/saltify.html)
+- [Install Salt Cloud](https://docs.saltproject.io/en/latest/topics/cloud/install/index.html)
+- [Getting Started with Saltify](https://docs.saltproject.io/en/latest/topics/cloud/saltify.html)
 
 ---
 
