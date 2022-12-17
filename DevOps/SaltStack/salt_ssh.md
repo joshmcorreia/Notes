@@ -35,6 +35,27 @@ web2:
   sudo: True
 ```
 
+## Adding custom grains to the roster file
+Here's an example `/etc/salt/roster` with custom grains
+```
+web1:
+  user: josh
+  sudo: True
+  host: 192.0.2.1
+  priv: /home/josh/admin.pem
+  grains:
+    location: west
+
+web2:
+  user: dave
+  passwd: Salt4Me!
+  host: 192.0.2.2
+  port: 2222
+  sudo: True
+  grains:
+    location: east
+```
+
 ## Ping all machines
 ```
 sudo salt-ssh -i '*' test.ping
@@ -48,4 +69,9 @@ sudo salt-ssh '*' cmd.run "whoami"
 ## Run raw commands on all machines
 ```
 sudo salt-ssh '*' -r "whoami"
+```
+
+## Print out a specific grain value for all machines
+```
+sudo salt-ssh -i '*' grains.get location
 ```
