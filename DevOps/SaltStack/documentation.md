@@ -12,3 +12,9 @@
 8. [Python](https://docs.saltproject.io/en/getstarted/system/python.html)
 
 # SaltStack Fundamentals
+1. [Demo Environment](https://docs.saltproject.io/en/getstarted/fundamentals/index.html)
+2. [Install SaltStack](https://docs.saltproject.io/en/getstarted/fundamentals/install.html)
+3. [Execute Commands](https://docs.saltproject.io/en/getstarted/fundamentals/remotex.html)
+4. [Targeting](https://docs.saltproject.io/en/getstarted/fundamentals/targeting.html)
+5. [Create a Salt State](https://docs.saltproject.io/en/getstarted/fundamentals/states.html)
+6. [Apply and Target States](https://docs.saltproject.io/en/getstarted/fundamentals/top.html)
