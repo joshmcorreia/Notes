@@ -18,3 +18,12 @@
 4. [Targeting](https://docs.saltproject.io/en/getstarted/fundamentals/targeting.html)
 5. [Create a Salt State](https://docs.saltproject.io/en/getstarted/fundamentals/states.html)
 6. [Apply and Target States](https://docs.saltproject.io/en/getstarted/fundamentals/top.html)
+
+# SaltStack Configuration Management
+1. [Introduction](https://docs.saltproject.io/en/getstarted/config/index.html)
+2. [Functions](https://docs.saltproject.io/en/getstarted/config/functions.html)
+3. [Pillar](https://docs.saltproject.io/en/getstarted/config/pillar.html)
+4. [Includes](https://docs.saltproject.io/en/getstarted/config/include.html)
+5. [Ordering & Requisites](https://docs.saltproject.io/en/getstarted/config/requisites.html)
+6. [Jinja](https://docs.saltproject.io/en/getstarted/config/jinja.html)
+7. [Manage Files](https://docs.saltproject.io/en/getstarted/config/files.html)
