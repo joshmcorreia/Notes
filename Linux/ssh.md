@@ -32,6 +32,53 @@ ssh josh@josh.test.com ls
 
 ---
 
+# SSH Config
+
+### Creating the SSH config
+```
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+```
+
+### Sample SSH config
+```
+Host obsidian
+    HostName obsidian.example.com
+    User josh
+    Port 2222
+```
+
+### SSH config with specific key file
+```
+Host obsidian
+    HostName obsidian.example.com
+    User josh
+    Port 2222
+    IdentityFile ~/.ssh/josh.key
+```
+
+### Using ProxyJump to SSH through a proxy
+```
+Host jumpserver
+    HostName jumpserver.example.com
+    User josh
+    Port 1111
+
+Host obsidian
+    HostName obsidian.example.com
+    User josh
+    Port 2222
+    ProxyJump jumpserver
+```
+
+### Using SSH Configs
+Once a host is defined in your SSH config, all you need to do to use it is connect to it by the "Host" field
+```
+ssh obsidian
+```
+
+---
+
 # Securing an SSH Server:
 
 ### Disable root login:
