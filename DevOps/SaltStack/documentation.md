@@ -27,3 +27,10 @@
 5. [Ordering & Requisites](https://docs.saltproject.io/en/getstarted/config/requisites.html)
 6. [Jinja](https://docs.saltproject.io/en/getstarted/config/jinja.html)
 7. [Manage Files](https://docs.saltproject.io/en/getstarted/config/files.html)
+
+# SaltStack Event-Driven Infrastructure
+1. [Introduction](https://docs.saltproject.io/en/getstarted/event/index.html)
+2. [Watching Events](https://docs.saltproject.io/en/getstarted/event/events.html)
+3. [Custom Events](https://docs.saltproject.io/en/getstarted/event/custom.html)
+4. [Beacons](https://docs.saltproject.io/en/getstarted/event/beacons.html)
+5. [Event Reactor](https://docs.saltproject.io/en/getstarted/event/reactor.html)
