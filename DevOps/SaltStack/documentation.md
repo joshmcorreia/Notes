@@ -41,3 +41,6 @@
 3. [Connect](https://docs.saltproject.io/en/getstarted/ssh/connect.html)
 4. [Remote Execution](https://docs.saltproject.io/en/getstarted/ssh/remotex.html)
 5. [Apply States](https://docs.saltproject.io/en/getstarted/ssh/states.html)
+
+# Salt User Guide
+[Salt User Guide](https://docs.saltproject.io/salt/user-guide/en/latest/)
