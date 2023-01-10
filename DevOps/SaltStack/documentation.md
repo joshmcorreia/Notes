@@ -43,4 +43,5 @@
 5. [Apply States](https://docs.saltproject.io/en/getstarted/ssh/states.html)
 
 # Salt User Guide
-[Salt User Guide](https://docs.saltproject.io/salt/user-guide/en/latest/)
+- [Salt User Guide](https://docs.saltproject.io/salt/user-guide/en/latest/)
+- [Use Terraform and SaltStack for Provisioning and Configuration Management](https://devops.ionos.com/tutorials/use-terraform-and-saltstack-for-provisioning-and-configuration-management.html)
