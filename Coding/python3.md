@@ -19,3 +19,23 @@ source venv_test/bin/activate
 ```
 deactivate
 ```
+
+## Print the python version
+```
+python --version
+```
+
+## List packages installed in a virtual environment:
+```
+pip list
+```
+
+## Save a venv for installation on another computer:
+```
+pip freeze > requirements.txt
+```
+
+## Load a venv from a requirements file:
+```
+pip install -r requirements.txt
+```
