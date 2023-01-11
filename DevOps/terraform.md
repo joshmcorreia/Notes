@@ -46,6 +46,11 @@ Validates the configuration file
 ### `terraform apply`
 Prints out the execution plan and then deploys it if the user approves it
 
+### Dynamically pass variables to terraform
+```
+terraform apply -var "instance_name=JoshsInstance"
+```
+
 ### `terraform show`
 Inspects the current state of the terraform resources
 
