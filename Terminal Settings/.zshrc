@@ -27,3 +27,11 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 #add timestamp for each entry
 setopt EXTENDED_HISTORY
+
+export GREP_OPTIONS='--color=auto' GREP_COLOR='0;39;101'
+
+autoload -Uz compinit
+compinit
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
