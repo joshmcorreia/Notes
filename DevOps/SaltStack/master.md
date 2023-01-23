@@ -1,10 +1,15 @@
 # Salt Master
 
-### List minion keys
+## List minion keys
 ```
 $ sudo salt-key -L
 Accepted Keys:
 Denied Keys:
 Unaccepted Keys:
 Rejected Keys:
+```
+
+## Accept all minion keys
+```
+sudo salt-key -A
 ```
