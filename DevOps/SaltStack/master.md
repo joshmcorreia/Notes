@@ -13,3 +13,7 @@ Rejected Keys:
 ```
 sudo salt-key -A
 ```
+
+## Delete a denied key
+Denied keys are stored in `/etc/salt/pki/master/minions_denied/` as files and can be deleted like any other file.
+
