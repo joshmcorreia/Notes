@@ -63,17 +63,78 @@ Unaccepted Keys:
 Rejected Keys:
 ```
 
+---
+
 ## Accept all minion keys
 [Source](https://docs.saltproject.io/en/latest/ref/cli/salt-key.html)
 ```
 sudo salt-key -A
 ```
 
+---
+
 ## Delete all minion keys
 [Source](https://docs.saltproject.io/en/latest/ref/cli/salt-key.html)
 ```
 sudo salt-key -D
 ```
+---
 
 ## Delete a denied key
 Denied keys are stored in `/etc/salt/pki/master/minions_denied/` as files and can be deleted like any other file.
+
+---
+
+## Ping all minions
+```
+sudo salt '*' test.ping
+```
+
+---
+
+## Run a command on all minions
+```
+sudo salt '*' cmd.run "whoami"
+```
+
+To run a command as a specific user:
+```
+sudo salt '*' cmd.run "whoami" runas=josh
+```
+
+To run a command in the background:
+```
+sudo salt '*' cmd.run_bg "whoami"
+```
+
+---
+
+## Print out a specific grain value for all minions
+```
+sudo salt '*' grains.get location
+```
+
+---
+
+## Kill a process on all minions
+```
+sudo salt '*' ps.pkill "nginx"
+```
+OR
+```
+sudo salt '*' ps.pkill "nginx" signal=9
+```
+
+---
+
+## Search the process tree on all minions
+```
+sudo salt '*' ps.psaux "nginx"
+```
+
+---
+
+## Check the disk usage on all minions
+```
+sudo salt '*' disk.percent /
+```
