@@ -116,6 +116,19 @@ sudo salt '*' grains.get location
 
 ---
 
+## Target minions with specific grains
+[Source](https://docs.saltproject.io/salt/user-guide/en/latest/topics/grains.html#targeting-with-grains)
+```
+sudo salt -G 'cpuarch:x86_64' test.ping
+```
+
+You can also target minions with custom grains in the same way:
+```
+sudo salt -G 'region:us-west-1' test.ping
+```
+
+---
+
 ## Kill a process on all minions
 ```
 sudo salt '*' ps.pkill "nginx"
