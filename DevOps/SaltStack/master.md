@@ -138,3 +138,44 @@ sudo salt '*' ps.psaux "nginx"
 ```
 sudo salt '*' disk.percent /
 ```
+
+---
+
+## Copy a file to all minions
+```
+sudo salt-cp '*' defaults.cfg /home/josh/defaults.cfg
+```
+
+---
+
+## Top files
+[The Top File](https://docs.saltproject.io/en/latest/ref/states/top.html)
+
+First enable the Top file by adding the following lines to `/etc/salt/master`
+```
+file_roots:
+  base:
+    - /srv/salt
+```
+
+Create the folder where our salt state files will reside
+```
+sudo mkdir /srv/salt
+```
+
+Create an example salt state file
+```
+sudo touch /srv/salt/examples.sls
+```
+
+Populate the salt state file
+```
+install vim:
+  pkg.installed:
+    - name: vim
+```
+
+Apply the salt state file
+```
+sudo salt '*' state.apply examples
+```
