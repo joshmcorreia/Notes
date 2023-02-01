@@ -33,3 +33,18 @@ identifier:
     - function_arg: arg_value
     - function_arg: arg_value
 ```
+
+---
+
+## Calling an execution module from within a salt state
+[Source](https://stackoverflow.com/a/20788572)
+
+To call an execution module from within a salt state you need to use `module.run`. In the following example I am calling the `ps.psaux` module to see if `tmux` is currently running. `m_name` stands for `module name` and denotes the value that is passed into the module.
+
+Example:
+```
+check_tmux:
+  module.run:
+    - name: ps.psaux
+    - m_name: tmux
+```
