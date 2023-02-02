@@ -70,6 +70,14 @@ hostnamectl set-hostname bastion
 
 ---
 
+## How to refresh a pillar after changing it
+[Source](https://docs.saltproject.io/en/getstarted/config/pillar.html)
+```
+sudo salt '*' saltutil.refresh_pillar
+```
+
+---
+
 ## How to pass a pillar value to a state file from the command line
 [Source](https://stackoverflow.com/a/45045773)
 
