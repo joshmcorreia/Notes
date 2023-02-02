@@ -116,6 +116,14 @@ sudo salt '*' grains.get location
 
 ---
 
+## Refresh the grains of all minions
+If changes are made to a grain on a minion, the master will need to update the grain values for that minion.
+```
+salt '*' saltutil.refresh_modules
+```
+
+---
+
 ## Target minions with specific grains
 [Source](https://docs.saltproject.io/salt/user-guide/en/latest/topics/grains.html#targeting-with-grains)
 ```
