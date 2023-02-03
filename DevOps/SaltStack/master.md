@@ -109,7 +109,14 @@ sudo salt '*' cmd.run_bg "whoami"
 
 ---
 
-## Print out a specific grain value for all minions
+## Update a grain value on all minions
+```
+sudo salt '*' grains.setval region us-west-1
+```
+
+---
+
+## Print out a grain value for all minions
 ```
 sudo salt '*' grains.get location
 ```
@@ -119,7 +126,7 @@ sudo salt '*' grains.get location
 ## Refresh the grains of all minions
 If changes are made to a grain on a minion, the master will need to update the grain values for that minion.
 ```
-salt '*' saltutil.refresh_modules
+sudo salt '*' saltutil.refresh_modules
 ```
 
 ---
