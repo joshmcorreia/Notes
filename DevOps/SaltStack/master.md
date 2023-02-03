@@ -137,6 +137,21 @@ sudo salt -G 'region:us-west-1' test.ping
 
 ---
 
+## Compound minion targeting
+Using [compound matchers](https://docs.saltproject.io/en/latest/topics/targeting/compound.html) you are able to create rather complex minion targeting methods.
+
+This example shows how to target all minions that do not have the `region:us-west-1` grain
+```
+sudo salt -C 'not G@region:us-west-1' test.ping
+```
+
+This example shows how to target all but one minion
+```
+sudo salt -C 'not minion1' test.ping
+```
+
+---
+
 ## Kill a process on all minions
 ```
 sudo salt '*' ps.pkill "nginx"
