@@ -48,3 +48,31 @@ check_tmux:
     - name: ps.psaux
     - m_name: tmux
 ```
+
+---
+
+## Copy a file to a minion
+[Source](https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed)
+```
+copy_delete_script:
+  file.managed:
+    - name: /home/ubuntu/delete_stuff.py
+    - source: salt://scripts/delete_stuff.py
+    - user: ubuntu
+```
+
+The `source` field here is based on the `file_roots` configuration on the Salt Master. By default the Salt Master's `file_roots` is set to `/srv/salt` so this file exists on the Salt Master at `/srv/salt/scripts/delete_stuff.py`
+
+---
+
+## Execute a Python script on a minion
+[Source](https://archive.repo.saltproject.io/en/2017.7/ref/states/all/salt.states.cmd.html#salt.states.cmd.run)
+```
+run_delete_stuff_script:
+  cmd.run:
+    - name: python3 delete_stuff.py
+    - cwd: /home/ubuntu
+    - timeout: 10
+    - runas: ubuntu
+```
+This piggybacks off of the prior section, "Copy a file to a minion". Combining these two sections, you are able to copy a file to a minion and then execute it.
