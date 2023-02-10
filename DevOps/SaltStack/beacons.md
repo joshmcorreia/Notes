@@ -29,3 +29,11 @@ After changes are made to the beacon file you will need to restart the minion
 ```
 sudo systemctl restart salt-minion
 ```
+
+---
+
+## List the beacons on all minions
+[Source](https://docs.saltproject.io/salt/user-guide/en/latest/topics/beacons.html#managing-at-the-terminal)
+```
+sudo salt '*' beacons.list
+```
