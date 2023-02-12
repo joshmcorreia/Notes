@@ -85,3 +85,19 @@ Instead of having to update the pillar file, you can also pass the pillar on the
 ```
 sudo salt '*' state.apply update_hostname pillar='{"server_hostname"="bastion"}'
 ```
+
+---
+
+## List the pillar keys on all minions
+[Source](https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.pillar.html#salt.modules.pillar.ls)
+```
+sudo salt '*' pillar.ls
+```
+
+---
+
+## List the pillar keys and values on all minions
+[Source](https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.pillar.html#salt.modules.pillar.items)
+```
+sudo salt '*' pillar.items
+```
