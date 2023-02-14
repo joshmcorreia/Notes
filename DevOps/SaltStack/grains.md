@@ -36,6 +36,12 @@ sudo salt '*' grains.item cpuarch region
 sudo salt -G 'cpuarch:x86_64' grains.item num_cpus
 ```
 
+## Apply a Salt State to specific grains
+[Source](https://docs.saltproject.io/en/latest/topics/targeting/index.html#targeting-with-grains)
+```
+sudo salt -G 'cpuarch:x86_64' state.apply stop_nginx
+```
+
 ## Defining custom grains from the Salt Master
 [Source](https://docs.saltproject.io/salt/user-guide/en/latest/topics/grains.html#defining-custom-grains)
 ```
