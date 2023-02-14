@@ -24,6 +24,10 @@ sudo salt '*' grains.items
 ```
 sudo salt '*' grains.item cpuarch
 ```
+You can also list the specific grain data of multiple grains at once
+```
+sudo salt '*' grains.item cpuarch region
+```
 
 ## Targetting with grains
 [Source](https://docs.saltproject.io/salt/user-guide/en/latest/topics/grains.html#targeting-with-grains)
