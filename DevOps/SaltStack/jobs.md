@@ -20,13 +20,13 @@ sudo salt <minion> saltutil.kill_job <jid>
 ```
 
 ## Kill all active jobs on a specific minion
-[Source](https://docs.saltproject.io/en/latest/topics/jobs/index.html#functions-in-the-saltutil-module)
+[Source](https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.saltutil.html#salt.modules.saltutil.kill_all_jobs)
 ```
-sudo salt <minion> saltutil.kill_job *
+sudo salt <minion> saltutil.kill_all_jobs
 ```
 
 ## Kill all active jobs on all minions
-[Source](https://docs.saltproject.io/en/latest/topics/jobs/index.html#functions-in-the-saltutil-module)
+[Source](https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.saltutil.html#salt.modules.saltutil.kill_all_jobs)
 ```
-sudo salt '*' saltutil.kill_job *
+sudo salt '*' saltutil.kill_all_jobs
 ```
