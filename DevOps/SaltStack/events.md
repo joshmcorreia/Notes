@@ -52,6 +52,51 @@ salt/job/20230215195056345172/ret/ip-10-0-0-243	{
 
 ---
 
+## Send a custom event with data from a minion to the master
+[Source](https://docs.saltproject.io/en/getstarted/event/custom.html)
+
+You can also send event data along with the event tag
+```
+salt-call event.send /my/test/event '{"data": "my event test"}'
+```
+The following events will then appear in the Salt Master event log
+```
+/my/test/event	{
+    "_stamp": "2023-02-17T18:47:20.094995",
+    "cmd": "_minion_event",
+    "data": {
+        "__pub_fun": "event.send",
+        "__pub_jid": "20230217184720076105",
+        "__pub_pid": 22475,
+        "__pub_tgt": "salt-call",
+        "data": "my event test"
+    },
+    "id": "ip-10-0-0-108",
+    "tag": "/my/test/event"
+}
+salt/job/20230217184720107480/ret/ip-10-0-0-108	{
+    "_stamp": "2023-02-17T18:47:20.110437",
+    "arg": [
+        "/my/test/event",
+        "{\"data\": \"my event test\"}"
+    ],
+    "cmd": "_return",
+    "fun": "event.send",
+    "fun_args": [
+        "/my/test/event",
+        "{\"data\": \"my event test\"}"
+    ],
+    "id": "ip-10-0-0-108",
+    "jid": "20230217184720107480",
+    "retcode": 0,
+    "return": true,
+    "tgt": "ip-10-0-0-108",
+    "tgt_type": "glob"
+}
+```
+
+---
+
 ## Enable presence events
 [Source](https://docs.saltproject.io/en/latest/ref/configuration/master.html#presence-events)
 
