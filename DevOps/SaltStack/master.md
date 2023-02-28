@@ -152,6 +152,11 @@ This example shows how to target all minions that do not have the `region:us-wes
 sudo salt -C 'not G@region:us-west-1' test.ping
 ```
 
+This example shows how to target minions with multiple grains
+```
+sudo salt -C 'G@region:us-west-1 and G@cpuarch:x86_64' test.ping
+```
+
 This example shows how to target all but one minion
 ```
 sudo salt -C 'not minion1' test.ping
