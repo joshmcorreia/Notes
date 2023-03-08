@@ -9,6 +9,13 @@ Make sure that the Salt Master accepts incoming connections on ports 4505 and 45
 
 ---
 
+## Debug the Salt Master
+```
+sudo salt-master -l debug
+```
+
+---
+
 ## Auto accept minions from Grains
 [Source](https://docs.saltproject.io/en/latest/topics/tutorials/autoaccept_grains.html)
 
