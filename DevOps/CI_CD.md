@@ -4,6 +4,8 @@
 [Source](https://aws.amazon.com/devops/continuous-integration/)
 > Continuous integration is a DevOps software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run. Continuous integration most often refers to the build or integration stage of the software release process and entails both an automation component (e.g. a CI or build service) and a cultural component (e.g. learning to integrate frequently). The key goals of continuous integration are to find and address bugs quicker, improve software quality, and reduce the time it takes to validate and release new software updates.
 
+The main purpose of Continuous Integration is to allow a developer's changes to be validated by automatically building the application and then testing the application. This will help prevent developers from introducing new bugs into the code and ensures that the application functions as intended. [Source](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
+
 ### Why is Continuous Integration Needed?
 [Source](https://aws.amazon.com/devops/continuous-integration/)
 > In the past, developers on a team might work in isolation for an extended period of time and only merge their changes to the master branch once their work was completed. This made merging code changes difficult and time-consuming, and also resulted in bugs accumulating for a long time without correction. These factors made it harder to deliver updates to customers quickly.
@@ -39,3 +41,17 @@ From personal experience I have found this to be important.
 ### Continuous Delivery vs. Continuous Deployment
 [Source](https://aws.amazon.com/devops/continuous-delivery/)
 > With continuous delivery, every code change is built, tested, and then pushed to a non-production testing or staging environment. There can be multiple, parallel test stages before a production deployment. The difference between continuous delivery and continuous deployment is the presence of a manual approval to update to production. With continuous deployment, production happens automatically without explicit approval.
+
+---
+
+### How long should a CI/CD pipeline take?
+There is no golden standard for how long a CI/CD pipeline should take. Depending on the size of the application and scope of the project, a pipeline could take minutes, or it could take days. It is important to fit the pipeline to the needs of the specific application or company. As you can see in [this reddit poll](https://www.reddit.com/r/devops/comments/bf86ox/how_long_are_your_cicd_pipelines/), everyone has different CI/CD pipeline lengths.
+
+Even though there isn't a specific time to shoot for, it is best to have developers receive feedback as quickly as possible. This is covered more in-depth in the "Fail Fast and Fail First" section below.
+
+The time it takes for a CI/CD pipeline can be greatly reduced by only running jobs that are necessary, such as only running smoke-tests on every commit and only running the entire suite of jobs on merge requests. This will ensure that long-running jobs are not constantly being triggered on the pipeline and helps reduce unnecessary resource usage.
+
+### Fail Fast and Fail First
+In order to give developers feedback as quickly as possible, ideally a CI/CD pipeline will have the fastest jobs run first. An example of this would be having a code analysis tool run first. If the code is not able to compile, the pipeline should fail as quickly as possible and not waste resources on spinning up a network or running tests. This will save time and money, and quickly lets the developer know that they need to fix their code.
+
+[This article] summarizes prioritizing failure well, "Making this change makes it faster to discover that something is wrong, at a cost of not finding out how much is wrong. In a way, this doesn’t really matter. Contributors should be encouraged to satisfy themselves of the quality of their work before submitting a pull request, so that the pipeline is only a backstop and not the first place they find out about problems." It is important for developers to test their own work before pushing up changes and to avoid relying on the pipeline to tell them something is wrong.
