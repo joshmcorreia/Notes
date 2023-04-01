@@ -49,7 +49,7 @@
 
 ---
 
-# Extensions:
+## Extensions:
 - Highlight Bad Chars
 - Remote - SSH
 - Remote - SSH: Editing Configuration Files
@@ -58,3 +58,17 @@
 - Jupyter
 - GitLens
 - Better Comments
+
+---
+
+## Use Remote SSH with a private key instead of a password:
+
+### Windows 10:
+To use Remote SSH with a private key all you have to do is make sure that there is a private key in the same directory as the SSH config that VSCode checks
+
+You can check which SSH config VSCode is using by doing the following:
+1. Open a new VSCode window
+2. Press <kbd>F1</kbd> and type in "open ssh conf" then select "Remote-SSH: Open SSH Configuration File..."
+3. Look at the SSH configs listed in the dropdown
+    Example: `C:\Users\joshm\.ssh\config`
+    For this example I would need to put a private key inside of `C:\Users\joshm\.ssh`
