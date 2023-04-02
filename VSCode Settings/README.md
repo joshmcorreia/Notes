@@ -72,3 +72,15 @@ You can check which SSH config VSCode is using by doing the following:
 3. Look at the SSH configs listed in the dropdown
     Example: `C:\Users\joshm\.ssh\config`
     For this example I would need to put a private key inside of `C:\Users\joshm\.ssh`
+
+### Windows 10 - WSL2:
+[Source](https://stackoverflow.com/a/66048792)
+1. Create a new batch file somewhere on your Windows file system, for example `C:\Users\joshm\ssh.bat`
+2. Copy/paste the following into the file and then save the file
+    ```
+    C:\Windows\system32\wsl.exe ssh %*
+    ```
+3. Open a new VSCode Window
+4. Press <kbd>F1</kbd> and type in "remote ssh settings" then select "Remote-SSH: Settings"
+5. Paste the path of your batch file into the "Remote.SSH: Path" field
+    Example: `C:\Users\joshm\ssh.bat`
