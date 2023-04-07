@@ -76,3 +76,6 @@ HashiCorp's tutorial can be found [here](https://developer.hashicorp.com/terrafo
 
 ### AWS Tutorial
 HashiCorp's AWS tutorial can be found [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
+
+### Using variables in variables
+[This StackOverflow answer](https://stackoverflow.com/a/58841360) covers how to use variables in variables.
