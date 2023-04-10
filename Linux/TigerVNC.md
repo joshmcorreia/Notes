@@ -16,6 +16,11 @@ Verify:
 Would you like to enter a view-only password (y/n)? n
 ```
 
+## Start a session:
+```
+vncserver -depth 24 -geometry 1280x800 -localhost :1
+```
+
 ## List all sessions:
 ```
 $ vncserver -list
@@ -30,4 +35,9 @@ X DISPLAY #	RFB PORT #	PROCESS ID
 ```
 $ vncserver -kill :2
 Killing Xtigervnc process ID 2952... success!
+```
+
+## Kill all existing sessions:
+```
+$ vncserver -kill :*
 ```
