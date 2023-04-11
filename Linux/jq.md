@@ -38,6 +38,12 @@ $ jq '.workers' employee.json
 $ jq '.workers.name' employee.json
 "John Brooks"
 ```
+OR
+```
+$ jq '.workers["name"]' employee.json
+"John Brooks"
+```
+This is especially useful when a key contains a dash `-` such as `.workers["first-name"]` and can help avoid the error message "... cannot be subtracted".
 
 ## Save jq changes to a file
 [Source](https://stackoverflow.com/questions/42716734/modify-a-key-value-in-a-json-using-jq-in-place)
