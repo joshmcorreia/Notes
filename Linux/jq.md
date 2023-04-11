@@ -7,7 +7,7 @@
 
 This is the sample file that I'll be using for demonstration purposes, named `employee.json`
 ```
-{"workers":{"name": "John Brooks","id": "003"}}
+{"workers":{"name": "John Brooks","id": "003","jobs": []}}
 ```
 
 ## Pretty print a json file
@@ -17,7 +17,8 @@ $ jq '.' employee.json
 {
   "workers": {
     "name": "John Brooks",
-    "id": "003"
+    "id": "003",
+    "jobs": []
   }
 }
 ```
@@ -28,7 +29,8 @@ $ jq '.' employee.json
 $ jq '.workers' employee.json
 {
   "name": "John Brooks",
-  "id": "003"
+  "id": "003",
+  "jobs": []
 }
 ```
 
@@ -49,14 +51,51 @@ This is especially useful when a key contains a dash `-` such as `.workers["firs
 [Source](https://stackoverflow.com/questions/42716734/modify-a-key-value-in-a-json-using-jq-in-place)
 ```
 $ echo "$( jq '.workers.name = "abcde"' employee.json )" > employee.json
+$ cat employee.json
+{
+  "workers": {
+    "name": "abcde",
+    "id": "003",
+    "jobs": []
+  }
+}
 ```
 
 ## Update a key's value
 ```
 $ echo "$( jq '.workers.name = "abcde"' employee.json )" > employee.json
+$ cat employee.json
+{
+  "workers": {
+    "name": "abcde",
+    "id": "003",
+    "jobs": []
+  }
+}
+```
+
+## Add to a list
+```
+$ jq '.workers.jobs |= . + ["software engineer"]' employee.json
+{
+  "workers": {
+    "name": "John Brooks",
+    "id": "003",
+    "jobs": [
+      "software engineer"
+    ]
+  }
+}
 ```
 
 ## Delete a key
 ```
 $ echo "$( jq 'del(.workers.id)' employee.json)" > employee.json
+$ cat employee.json
+{
+  "workers": {
+    "name": "John Brooks",
+    "jobs": []
+  }
+}
 ```
