@@ -18,6 +18,17 @@ Then restart the salt minion:
 sudo systemctl restart salt-minion
 ```
 
+## Set the Mine interval:
+Open the salt minion's config file
+```
+sudo vim /etc/salt/minion
+```
+and add the following line
+```
+mine_interval: 60
+```
+The `mine_interval` is in minutes, and by default it is set to 60.
+
 ## Force Mine data to update
 [Source](https://docs.saltproject.io/en/latest/topics/mine/#example)
 ```
