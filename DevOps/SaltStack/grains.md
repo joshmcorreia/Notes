@@ -47,3 +47,10 @@ sudo salt -G 'cpuarch:x86_64' state.apply stop_nginx
 ```
 sudo salt minion01 grains.setval deployment datacenter4
 ```
+
+## Get the IP of every minion
+```
+$ sudo salt '*' network.interface_ip eth0
+ip-10-0-0-52:
+    10.0.0.52
+```
