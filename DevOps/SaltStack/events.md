@@ -97,6 +97,24 @@ salt/job/20230217184720107480/ret/ip-10-0-0-108	{
 
 ---
 
+## Send grains to the master during a minion start event
+Sometimes you may want to send specific grains to the master when a minion starts up. This can be done using the [`start_event_grains` configuration](https://docs.saltproject.io/en/latest/ref/configuration/minion.html#start-event-grains) on the minion.
+
+Open `/etc/salt/minion` on the minion and add the following lines:
+```
+start_event_grains:
+  - fqdn_ip4
+```
+
+Now when the minion starts up and connects to the master you can look at the event log and see the following information:
+```
+[DEBUG   ] Sending event: tag = minion_start; data = {'id': 'ip-10-0-0-52', 'cmd': '_minion_event', 'pretag': None, 'data': 'Minion ip-10-0-0-52 started at Wed Apr 12 18:28:15 2023', 'tag': 'minion_start', 'grains': {'fqdn_ip4': ['10.0.0.52']}, '_stamp': '2023-04-12T18:28:24.852805'}
+```
+
+I have previously combined this with a reactor and orchestrator to allow me to add the IP address of a new minion to the config files of all other minions.
+
+---
+
 ## Enable presence events
 [Source](https://docs.saltproject.io/en/latest/ref/configuration/master.html#presence-events)
 
