@@ -42,6 +42,45 @@ Killing Xtigervnc process ID 2952... success!
 $ vncserver -kill :*
 ```
 
+## Run TigerVNC as a system service:
+[Source](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04)
+
+Create the service file
+```
+sudo touch /etc/systemd/system/vncserver.service
+```
+then open the file and add the following
+```
+[Unit]
+Description=Start TigerVNC server at startup
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu
+PIDFile=/home/ubuntu/.vnc/%H:1.pid
+ExecStartPre=-/usr/bin/vncserver -kill :1 > /dev/null 2>&1
+ExecStart=/usr/bin/vncserver -depth 24 -geometry 1280x800 -localhost :1
+ExecStop=/usr/bin/vncserver -kill :1
+
+[Install]
+WantedBy=multi-user.target
+```
+Reload systemd
+```
+sudo systemctl daemon-reload
+```
+Enable the unit file
+```
+sudo systemctl start vncserver
+```
+Check the status of the vncserver
+```
+systemctl status vncserver
+```
+
 ## Use XFCE4 as the Desktop environment:
 [Source](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04)
 
