@@ -41,3 +41,33 @@ Killing Xtigervnc process ID 2952... success!
 ```
 $ vncserver -kill :*
 ```
+
+## Use XFCE4 as the Desktop environment:
+[Source](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04)
+
+Open the `xstartup` file
+```
+sudo vim ~/.vnc/xstartup
+```
+and add the following lines
+```
+#!/bin/sh
+# Start up the standard system desktop
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+/usr/bin/startxfce4
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+x-window-manager &
+```
+
+## Debug connections:
+If you're having an issue connecting you can look at the log files inside of `~/.vnc` to try to figure out what's happening.
+
+Example of trying to use the incorrect password:
+```
+$ tail -f ip-10-0-0-161.ec2.internal:1.log
+ SConnection: AuthFailureException: Authentication failure
+ VNCSConnST:  closing 50.39.229.234::55721: Authentication failure:
+              Authentication failure
+```
