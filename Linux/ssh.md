@@ -5,6 +5,8 @@
 ```
 ssh-keygen # uses the default key size, currently 3072 bits
 
+ssh-keygen -t ed25519 # use ed25519 instead of RSA
+
 ssh-keygen -b 4096 # specifies the key size to be 4096 bits
 ```
 
