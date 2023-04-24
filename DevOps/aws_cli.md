@@ -10,3 +10,9 @@ To set up your credentials, type the following:
 ```
 aws configure
 ```
+
+## Deregister an AMI
+[Source](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/deregister-image.html)
+```
+aws ec2 deregister-image --image-id ami-4fa54026
+```
