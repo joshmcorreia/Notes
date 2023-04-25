@@ -1,12 +1,12 @@
 # Ultimate-VSCode-Settings
-<kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> and click `Open Settings (JSON)`
+Press <kbd>F1</kbd> and click `Open User Settings (JSON)`
 
 `settings.json`:
 ```
 {
     "editor.renderWhitespace": "all",
     "editor.dragAndDrop": false, // disable the dumb mouse drag and drop feature
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     "python.analysis.autoImportCompletions": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
@@ -28,12 +28,13 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
     "gitlens.hovers.enabled": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "markdown-preview-github-styles.colorTheme": "light"
 }
 ```
 
 ---
-<kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> and click `Preferences: Open Keyboard Shortcuts (JSON)`
+Press <kbd>F1</kbd> and click `Preferences: Open Keyboard Shortcuts (JSON)`
 
 `keybindings.json`:
 ```
