@@ -20,6 +20,11 @@ sudo useradd -m josh -d /home/josh2
 sudo useradd -s /usr/bin/zsh josh
 ```
 
+### Create a user and add them to a specific group:
+```
+sudo useradd josh -g sudo
+```
+
 ### Delete a user:
 ```
 userdel josh
