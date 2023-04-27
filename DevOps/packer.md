@@ -56,7 +56,7 @@ source "amazon-ebs" "ubuntu_focal_nvirginia" {
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["099720109477"]
+    owners      = ["self"]
   }
   ssh_username = "ubuntu"
   tags = {
