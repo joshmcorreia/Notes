@@ -11,8 +11,10 @@ Press <kbd>F1</kbd> and click `Open User Settings (JSON)`
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
     "terminal.integrated.scrollback": 10000,
-    "git.openDiffOnClick": false,
+    "git.openDiffOnClick": true,
+    "git.autofetch": true,
     "git.showInlineOpenFileAction": true,
+    "scm.alwaysShowActions": true,
     "workbench.colorCustomizations" : {
         "terminal.foreground" : "#000000",
         "terminal.background" : "#ffffff",
@@ -29,7 +31,8 @@ Press <kbd>F1</kbd> and click `Open User Settings (JSON)`
     "gitlens.statusBar.enabled": false,
     "gitlens.hovers.enabled": false,
     "editor.minimap.enabled": false,
-    "markdown-preview-github-styles.colorTheme": "light"
+    "markdown-preview-github-styles.colorTheme": "light",
+    "editor.fontFamily": "Cascadia Code"
 }
 ```
 
