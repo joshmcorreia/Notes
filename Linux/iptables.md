@@ -35,3 +35,14 @@ sudo iptables -A ALLOW_SSH_ACCESS --src 192.168.232.131 -j ACCEPT  # allow 192.1
 sudo iptables -A ALLOW_SSH_ACCESS -j DROP # drop everyone else
 sudo iptables -I INPUT -m tcp -p tcp --dport 22 -j ALLOW_SSH_ACCESS  # use chain ALLOW_SSH_ACCESS for packets coming to TCP port 22
 ```
+
+## Flush all chains
+This is the equivalent of deleting every rule
+```
+sudo iptables -F
+```
+
+## Delete all chains
+```
+sudo iptables -X
+```
