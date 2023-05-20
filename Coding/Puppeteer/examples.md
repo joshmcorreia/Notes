@@ -3,25 +3,31 @@
 ## Wait for a selector
 ``` js
 var login_selector = "input[id='email']"
-console.log("Waiting for login selector to load...")
 await page.waitForSelector(login_selector)
-console.log("Login selector loaded.")
 ```
 
 ## Type into a field
 ``` js
 var password_selector = "input[name='password']"
-console.log("Typing in password...")
 await page.type(password_selector, password)
-console.log("Successfully typed in password.")
 ```
 
 ## Press enter on the keyboard
 ``` js 
-console.log("Pressing Enter...")
 await page.keyboard.press("Enter");
-console.log("Successfully pressed Enter.")
 await page.waitForNavigation();
+```
+
+## Click a button
+``` js
+var button_selector = "button[data-var='loginBtn']"
+await page.click(button_selector);
+```
+
+## Navigate to a new page
+``` js
+var url = "https://www.google.com"
+await page.goto(url);
 ```
 
 ## Get a list of all links from the DOM
