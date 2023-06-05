@@ -9,3 +9,16 @@ Example:
 ```
 sudo salt my_minion_id slsutil.renderer salt://my_state_file.sls 'jinja'
 ```
+
+## Comments
+[Template Designer Documentation](https://jinja.palletsprojects.com/en/3.1.x/templates/)
+
+You can achieve comments in Jinja like so:
+```
+{# This is a comment #}
+```
+
+You CANNOT use traditional Python comment syntax such as
+```
+# This is NOT a comment
+```
