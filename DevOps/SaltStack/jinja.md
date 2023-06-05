@@ -17,6 +17,10 @@ You can achieve comments in Jinja like so:
 ```
 {# This is a comment #}
 ```
+If you need to remove trailing newlines:
+```
+{# This is a comment -#}
+```
 
 You CANNOT use traditional Python comment syntax such as
 ```
