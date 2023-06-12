@@ -1,7 +1,7 @@
 alias ls="ls --color=auto"
 alias ll="ls -la"
 alias psag="ps auxww | grep"
-alias untar="tax -xzvf"
+alias untar="tar -xzvf"
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
