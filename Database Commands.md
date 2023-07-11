@@ -79,6 +79,11 @@ DROP People;
 ALTER TABLE table_name ADD COLUMN has_car BOOLEAN AFTER age;
 ```
 
+### Add fields to a table with a default value:
+```
+ALTER TABLE table_name ADD COLUMN has_car BOOLEAN DEFAULT TRUE AFTER age;
+```
+
 ### Change column type:
 ```
 ALTER TABLE table_name MODIFY has_car VARCHAR(255);
