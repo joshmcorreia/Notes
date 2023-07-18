@@ -7,7 +7,7 @@ mkdir learn-terraform-docker-container
 cd learn-terraform-docker-container
 ```
 
-Copy the contents of `main.tf` into `main.tf`
+Copy the files from this repo folder into the folder `learn-terraform-docker-container`
 
 ```
 terraform init
