@@ -1,15 +1,5 @@
 # How to run shell commands:
 
-### Python3:
-``` python
-from subprocess import Popen, PIPE
-
-shell_command = "pip3 list"
-capture = Popen(shell_command, stdout=PIPE, stderr=PIPE, shell=True)
-std_out, std_err = capture.communicate()
-return_code = capture.returncode
-```
-
 ### JavaScript:
 Not applicable; JavaScript runs in a browser
 
