@@ -47,6 +47,12 @@ $ jq '.workers["name"]' employee.json
 ```
 This is especially useful when a key contains a dash `-` such as `.workers["first-name"]` and can help avoid the error message "... cannot be subtracted".
 
+## Print the value of a key without quotes
+```
+$ jq -r '.workers.name' employee.json
+John Brooks
+```
+
 ## Save jq changes to a file
 [Source](https://stackoverflow.com/questions/42716734/modify-a-key-value-in-a-json-using-jq-in-place)
 ```
