@@ -34,6 +34,20 @@ $ jq '.workers' employee.json
 }
 ```
 
+## Print the value of a specific key if the key is a number
+Sample `databases.json`
+```
+{"1": "names","2": "addresses"}
+```
+[Getting data from json using jq when key is numerical string](https://stackoverflow.com/a/28847101)
+```
+$ jq '.1' databases.json
+0.1 # this is not the behavior we want
+
+$ jq '.["1"]' databases.json
+"names"
+```
+
 ## Print the values of nested keys
 [Source](https://tecadmin.net/linux-jq-command/)
 ```
