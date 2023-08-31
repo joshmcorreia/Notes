@@ -110,6 +110,17 @@ git rebase master
 git push --force
 ```
 
+## Rebase a branch and ignore all changes to a specific file
+[Git. Rebase local branch atop local master. How do I ignore a single files changes?](https://stackoverflow.com/a/26018187)
+
+For this example I'll be rebasing a branch `example_branch` on top of the `master` branch. The branch `example_branch` has made changes to a file `file.txt` and I want to completely ignore all changes made to that file on the branch `example_branch`.
+```
+git checkout example_branch
+git checkout --ours file.txt
+git add file.txt
+git rebase --continue
+```
+
 ## Undo a commit and keep the changes ([Source](https://stackoverflow.com/a/15772171))
 ```
 # this command can be performed multiple times to undo multiple commits and keep their changes
