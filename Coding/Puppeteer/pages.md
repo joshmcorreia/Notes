@@ -24,3 +24,9 @@ var page = await incognito_context.newPage();
 var page_to_close = (await browser.pages())[0];
 await page_to_close.close();
 ```
+
+## Focus on a specific tab
+```js
+var page = (await browser.pages())[1];
+await page.bringToFront();
+```
