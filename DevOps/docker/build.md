@@ -67,7 +67,7 @@ When cloning private repositories it is unsafe to store a private key inside of 
 
 Make sure to add the ssh flag when building:
 ```bash
-docker build --ssh default -f Dockerfile.build_x86_64 -t x86_64:latest .
+docker build --ssh default -f build_x86_64.Dockerfile -t x86_64:latest .
 ```
 
 I've experienced issues during the clone stage on macOS and had to run `ssh-add --apple-use-keychain`. [Source](https://superuser.com/a/1724438/)
