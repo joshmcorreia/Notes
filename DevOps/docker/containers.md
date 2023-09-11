@@ -85,6 +85,20 @@ docker ps
 
 ---
 
+## Open an interactive shell on a running container:
+[docker exec](https://docs.docker.com/engine/reference/commandline/exec/)
+```bash
+docker exec -it MyUbuntuContainer bash
+```
+
+## Open an interactive shell on a running container as a specific user:
+[docker exec](https://docs.docker.com/engine/reference/commandline/exec/)
+```bash
+docker exec -u root -it MyUbuntuContainer bash
+```
+
+---
+
 ## Attach to a running docker container:
 ```bash
 docker attach adoring_turing # where adoring_turing is the name of the docker container
