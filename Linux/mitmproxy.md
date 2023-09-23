@@ -21,3 +21,22 @@ Open a web browser and go to http://127.0.0.1:8081 to see the web UI
 
 ## Getting mitmproxy certificate
 After setting mitmproxy as the proxy for Firefox you can navigate to http://mitm.it and download the mitmproxy certificate. This webpage has instructions on how to install the certificate either in the browser or on your computer.
+
+## Routing Python traffic through mitmproxy
+[How to pass all Python's traffics through a http proxy?](https://stackoverflow.com/questions/31639742/how-to-pass-all-pythons-traffics-through-a-http-proxy)
+
+1. Open a terminal and run the following command:
+    ```
+    export https_proxy="http://127.0.0.1:8080"
+    ```
+2. Run your python script
+    ```
+    python3 script.y
+    ```
+
+If you get a `CERTIFICATE_VERIFY_FAILED` error then you need to make your Python script aware of the certificate. Here's an example:
+```
+r = requests.post(url, data=data, verify='/path/to/public_key.pem')
+```
+
+Source: [How to get Python requests to trust a self signed SSL certificate?](https://stackoverflow.com/questions/30405867/how-to-get-python-requests-to-trust-a-self-signed-ssl-certificate)
