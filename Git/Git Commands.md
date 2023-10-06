@@ -13,26 +13,6 @@ In general I've found that it's best to only use tags on the branch that you rel
 
 # Git Commands
 
-## Set the name used to publish commits:
-```
-git config --global user.name "FIRST_NAME LAST_NAME"
-```
-
-## Set the email used to publish commits:
-```
-git config --global user.email "MY_NAME@example.com"
-```
-
-## Automatically rebase while pulling:
-```
-git config pull.rebase true
-```
-
-## Automatically stash your changes when performing a rebase:
-```
-git config rebase.autoStash true
-```
-
 ## Stash your changes
 ```
 git stash
@@ -159,13 +139,6 @@ git remote add origin git@bitbucket.org:josh/josh.git
 ## Delete references to branches that no longer exist on remote:
 ```
 git remote prune origin
-```
-
-## Force LF line endings on Windows:
-[Source](https://stackoverflow.com/a/13154031)
-```
-git config --global core.autocrlf false
-git config --global core.eol lf
 ```
 
 ---
