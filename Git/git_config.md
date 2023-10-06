@@ -60,6 +60,19 @@ $ git config user.email
 joshmcorreia@example.com
 ```
 
+## Debug commit and author emails:
+Sometimes when dealing with rebasing or working with multiple emails you can get into scenarios where the author email and commit email are misaligned. This can be debugged with the following command:
+```
+$ git log --format=fuller
+commit 42d718456f18b002191b9340616f89b0bcb69497 (HEAD -> feature/josh_test)
+Author:     Josh Correia <joshcorreia@example.com>
+AuthorDate: Fri Oct 6 10:22:11 2023 -0700
+Commit:     Josh Correia <joshcorreiaold@example.com>
+CommitDate: Fri Oct 6 10:22:11 2023 -0700
+
+    Add stuff
+```
+
 ---
 
 ## Automatically rebase while pulling:
