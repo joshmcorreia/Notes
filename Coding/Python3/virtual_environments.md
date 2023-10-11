@@ -1,5 +1,3 @@
-# Python3
-
 # Virtual Environments
 
 Virtual environments are important because they allow you to install packages without interfering with global packages. If you need to use an updated version of a library you can install it in a virtual environment instead of updating the package globally which can break other libraries that depend on that package.
