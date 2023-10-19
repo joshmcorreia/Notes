@@ -4,13 +4,13 @@ alias psag="ps auxww | grep"
 alias untar="tar -xzvf"
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 setopt PROMPT_SUBST
-PROMPT="%F{red}┌─[%F{black}%n%F{yellow}@%F{blue}%m%f%F{red}]─[%F{green}%d%F{red}]─[%F{cyan}%D{%D %L:%M:%S %p}%F{red}]\$(parse_git_branch)"$'\n'"└──╼ %F{yellow}$ %F{black}"
+PROMPT="%K{white}%F{red}┌─[%F{black}%n%F{yellow}@%F{blue}%m%f%F{red}]─[%F{green}%d%F{red}]─[%F{cyan}%D{%D %L:%M:%S %p}%F{red}]\$(parse_git_branch)"$'\n'"└──╼ %F{yellow}$ %F{black}"
 TMOUT=1
 TRAPALRM() {
-    zle reset-prompt
+	zle reset-prompt
 }
 
 # ignores duplicated history entries when pressing up/down in terminal
