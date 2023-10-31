@@ -22,15 +22,6 @@ docker build -f build_x86_64.Dockerfile -t x86_64:latest . --no-cache
 
 ---
 
-## Add a user and set them as the user that the container launches with:
-``` bash
-RUN useradd -m hublink
-WORKDIR /home/hublink
-USER hublink
-```
-
----
-
 ## Viewing the size of each layer in an image:
 ```bash
 docker history my_image
@@ -45,20 +36,6 @@ When commands are tightly connected, such as running `apt update` followed by th
 
 ## Optimize Windows Dockerfiles:
 [This article](https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/optimize-windows-dockerfile) talks specifically about optimizing Dockerfiles on Windows.
-
----
-
-## Optimizing downloads with multi-stage `curl` images:
-One way to optimize images is by removing unnecessary dependencies and files from the final image. `curl` is often used to download files, but if your final image doesn't need `curl`, you can free up some space by never installing it on the image in the first place. I found the `curlimages/curl` [Docker image](https://hub.docker.com/r/curlimages/curl) that can be used for this specific purpose.
-
-You can use it in a multi-stage build like so (add this to your Dockerfile):
-```
-FROM curlimages/curl:7.83.1 AS file_downloader
-WORKDIR /home/curluser
-RUN curl -O https://www.google.com/my_folder.zip
-
-COPY --from=file_downloader /home/curluser/my_folder.zip /home/josh
-```
 
 ---
 
