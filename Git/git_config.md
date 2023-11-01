@@ -43,9 +43,19 @@ $ cat ~/REPO_NAME/.git/config
 git config --global user.name "Josh Correia"
 ```
 
+## Set the local name used to publish commits:
+```
+git config --local user.name "Josh Correia"
+```
+
 ## Set the global email used to publish commits:
 ```
 git config --global user.email "joshmcorreia@example.com"
+```
+
+## Set the local email used to publish commits:
+```
+git config --local user.email "joshmcorreia@example.com"
 ```
 
 ## View the name being used for commits:
@@ -67,7 +77,7 @@ $ git log --format=fuller
 commit 42d718456f18b002191b9340616f89b0bcb69497 (HEAD -> feature/josh_test)
 Author:     Josh Correia <joshcorreia@example.com>
 AuthorDate: Fri Oct 6 10:22:11 2023 -0700
-Commit:     Josh Correia <joshcorreiaold@example.com>
+Commit:     Josh Correia <joshcorreia.old@example.com>
 CommitDate: Fri Oct 6 10:22:11 2023 -0700
 
     Add stuff
