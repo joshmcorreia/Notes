@@ -141,6 +141,12 @@ git remote add origin git@bitbucket.org:josh/josh.git
 git remote prune origin
 ```
 
+## Change the author of the most recent commit
+[Source](https://stackoverflow.com/a/3042512)
+```
+git commit --amend --author="Josh Correia <joshmcorreia@example.com>" --no-edit
+```
+
 ---
 
 # Tags:
