@@ -23,9 +23,11 @@ ifconfig
 
 ### Get a new IP address (DHCP):
 [Source](https://serverfault.com/a/42804)
+
+**Note:** Be careful when doing this over SSH. If you don't combine these statements you can end up killing the network on the device and it won't lease a new IP address.
 ```
-sudo dhclient -r # release the lease on the IP address
-sudo dhclient # lease a new IP address
+# release the current lease on the IP address and then lease a new one
+sudo dhclient -r && sudo dhclient
 ```
 
 ### Manually set your IP address:
