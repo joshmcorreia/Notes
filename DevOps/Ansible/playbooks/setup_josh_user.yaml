@@ -1,0 +1,25 @@
+# ansible-playbook -i inventory.yaml setup_josh_user.yaml --ask-become-pass
+
+- name: Create the josh user and set up zsh
+  hosts: virtual_machines
+  tasks:
+  - name: Install zsh
+    become: true
+    ansible.builtin.package:
+      name: zsh
+      state: present
+  - name: Create the `josh` user
+    become: true
+    ansible.builtin.user:
+      name: josh
+      shell: /bin/zsh
+      groups: sudo
+      append: yes
+  - name: Download .zshrc
+    become: true
+    ansible.builtin.get_url:
+      url: https://raw.githubusercontent.com/joshmcorreia/Notes/main/Terminal%20Settings/.zshrc
+      dest: /home/josh/.zshrc
+      mode: '0644'
+      owner: josh
+      group: josh
