@@ -8,6 +8,7 @@
     ansible.builtin.package:
       name: zsh
       state: present
+
   - name: Create the `josh` user
     become: true
     ansible.builtin.user:
@@ -15,6 +16,7 @@
       shell: /bin/zsh
       groups: sudo
       append: yes
+
   - name: Download .zshrc
     become: true
     ansible.builtin.get_url:
@@ -23,6 +25,7 @@
       mode: '0644'
       owner: josh
       group: josh
+
   - name: Set authorized key taken from file
     ansible.posix.authorized_key:
       user: josh
