@@ -229,17 +229,3 @@ lsof -p 1337
 ```
 kill -9 `lsof -t -u josh`
 ```
-
----
-
-# Transfer files
-
-### Copy from a local machine to a remote machine:
-```
-scp file.txt remote_username@10.10.0.2:/remote/directory
-```
-
-### Copy from a remote machine to your local machine:
-```
-scp remote_username@10.0.0.1:/home/josh/file.txt .
-```
