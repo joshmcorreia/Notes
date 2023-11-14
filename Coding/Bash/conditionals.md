@@ -38,7 +38,7 @@ if [[ "$first" = "josh" && "$last" = "correia" ]]; then echo "Hello Josh Correia
 
 ## Check if arguments were provided
 [Source](https://stackoverflow.com/a/6482403)
-```
+``` bash
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
@@ -47,7 +47,7 @@ fi
 
 ## Check if a file exists
 [Source](https://stackoverflow.com/a/638980)
-```
+``` bash
 if [ -f /tmp/foo.txt ]; then
     echo "File found!"
 fi
@@ -55,7 +55,7 @@ fi
 
 ## Check if a file does not exist
 [Source](https://stackoverflow.com/a/638980)
-```
+``` bash
 if [ ! -f /tmp/foo.txt ]; then
     echo "File not found!"
 fi
@@ -63,7 +63,7 @@ fi
 
 ## Check if a command exists
 [Source](https://stackoverflow.com/a/26759734)
-```
+``` bash
 if [ -x "$(command -v git)" ]; then
   echo "'git' is installed" >&2
 fi
@@ -71,7 +71,7 @@ fi
 
 ## Check if a command does not exist
 [Source](https://stackoverflow.com/a/26759734)
-```
+``` bash
 if ! [ -x "$(command -v git)" ]; then
   echo "Error: 'git' is not installed." >&2
   exit 1
@@ -80,7 +80,7 @@ fi
 
 ## Check if the sudo password has been entered for a terminal session
 [Source](https://askubuntu.com/a/357222)
-```
+``` bash
 if sudo -n true 2>/dev/null; then 
     echo "I got sudo"
 else

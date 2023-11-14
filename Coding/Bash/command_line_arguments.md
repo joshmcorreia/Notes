@@ -2,7 +2,7 @@
 
 ## Flags
 [Source](https://stackoverflow.com/a/21128172)
-```
+``` bash
 a_flag=''
 b_flag=''
 files=''

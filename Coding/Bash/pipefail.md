@@ -2,7 +2,7 @@
 
 ## How do you catch error codes in a shell pipe?
 In bash we can do the following:
-```
+``` bash
 #!/bin/bash
 
 set -e # exit on error
