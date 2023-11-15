@@ -23,3 +23,18 @@ while getopts 'abf:v' flag; do
   esac
 done
 ```
+
+---
+
+## Access Arguments by Position
+``` bash
+#!/bin/bash
+echo "First argument is '$1'"
+echo "Second argument is '$2'"
+```
+
+```
+$ ./test.sh first second
+First argument is 'first'
+Second argument is 'second'
+```
