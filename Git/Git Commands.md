@@ -107,6 +107,15 @@ git rebase --continue
 git reset HEAD^
 ```
 
+## Remove a specific file from the latest commit
+[Remove file from latest commit](https://stackoverflow.com/a/15321456)
+```
+git reset --soft HEAD^
+git restore --staged path/to/unwanted_file
+git commit -c ORIG_HEAD
+git push --force
+```
+
 ## Revert to a specific commit on a remote branch ([Source](https://stackoverflow.com/a/41726152))
 ```
 git checkout <branch_name>
