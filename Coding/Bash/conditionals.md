@@ -1,18 +1,28 @@
 # Bash Conditionals
 
-## Check if a variable is equal to an integer
+## Check if a variable is equal to a specific integer
 ``` bash
 age=23
 if [ "$age" -eq 23 ]; then echo "Nobody likes you when you're 23"; fi
 ```
 
-## Check if a variable is not equal to an integer
+## Check if a variable is not equal to a specific integer
 ``` bash
 age=23
 if [ "$age" -ne 23 ]; then echo "You're not even 23"; fi
 ```
 
-## Check if a variable is equal to a string
+## Check if a variable is an integer
+[How do I test if a variable is a number in Bash?](https://stackoverflow.com/a/806923)
+``` bash
+re='^[0-9]+$'
+if ! [[ $MY_NUMBER =~ $re ]] ; then
+   echo "ERROR: Not a number"
+   exit 1
+fi
+```
+
+## Check if a variable is equal to a specific string
 [Source](https://stackoverflow.com/a/2237103)
 ``` bash
 name="josh"
@@ -20,7 +30,7 @@ if [ "$name" = "josh" ]; then echo "Hello Josh"; fi
 > Hello Josh
 ```
 
-## Check if a variable is not equal to a string
+## Check if a variable is not equal to a specific string
 ``` bash
 name="john"
 if [ "$name" != "josh" ]; then echo "Hello not-Josh"; fi
