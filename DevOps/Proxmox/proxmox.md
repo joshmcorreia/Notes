@@ -74,3 +74,21 @@ update VM 148: -delete unused0
 ```
 $ sudo pvesh get /cluster/resources --type vm
 ```
+
+### Get config info for a specific VM
+```
+$ sudo qm config 148
+boot:
+meta: creation-qemu=7.2.0,ctime=1700604130
+name: jenkins-pipeline-28
+scsi0: local:148/vm-148-disk-0.raw,size=20980890K
+smbios1: uuid=f2065a25-3992-48a6-bffd-5df4113690ad
+vmgenid: a549306c-431d-4fb3-a1bd-fe63e347b2fb
+```
+
+### List all hard disks for a specific VM
+```
+$ sudo pvesm list local --vmid 148
+Volid                       Format  Type             Size VMID
+local:148/vm-148-disk-0.raw raw     images    21484431360 148
+```
