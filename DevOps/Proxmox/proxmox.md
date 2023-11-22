@@ -92,3 +92,10 @@ $ sudo pvesm list local --vmid 148
 Volid                       Format  Type             Size VMID
 local:148/vm-148-disk-0.raw raw     images    21484431360 148
 ```
+
+### List all attached hard disks for a specific VM
+```
+# only disks that are currently attached show the size so grep for that, otherwise we'll get detached disks too
+$ sudo qm config 148 | grep ".raw" | grep "size=" | awk '{print $1}' | cut -d ":" -f 1
+scsi0
+```
