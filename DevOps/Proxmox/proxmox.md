@@ -44,3 +44,33 @@ transferred 0.0 B of 20.0 GiB (0.00%)
 transferred 20.0 GiB of 20.0 GiB (100.00%)
 scsi0: successfully created disk 'local:1000/vm-1000-disk-0.raw,size=20980890K'
 ```
+
+### Attach a disk to a VM
+[Documentation](https://pve.proxmox.com/pve-docs/qm.1.html)
+```
+$ sudo qm disk import 148 test-vm.qcow2 local
+importing disk 'test-vm.qcow2' to VM 148 ...
+Formatting '/var/lib/vz/images/148/vm-148-disk-1.raw', fmt=raw size=21484431360 preallocation=off
+transferred 0.0 B of 20.0 GiB (0.00%)
+...
+transferred 20.0 GiB of 20.0 GiB (100.00%)
+Successfully imported disk as 'unused0:local:148/vm-148-disk-1.raw'
+```
+
+### Detach a disk from a VM
+**Note:** This will detach the disk from the VM but it still needs to be deleted.
+```
+$ sudo qm set 148 --delete scsi0
+update VM 148: -delete scsi0
+```
+
+### Delete a disk from a VM
+```
+$ sudo qm set 148 --delete unused0
+update VM 148: -delete unused0
+```
+
+### Get VM resource information
+```
+$ sudo pvesh get /cluster/resources --type vm
+```
