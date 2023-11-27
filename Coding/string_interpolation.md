@@ -7,12 +7,6 @@ my_name = "Josh"
 message = f"My name is {my_name}."
 ```
 
-### JavaScript:
-``` js
-var my_name = "Josh"
-var message = `My name is ${my_name}.`
-```
-
 ### C#:
 ``` csharp
 string my_name = "Josh";

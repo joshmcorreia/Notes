@@ -1,32 +1,32 @@
-# Lists:
+# Lists
 
-### C#:
-``` csharp
+Note: lists are also known as Arrays in JavaScript
+``` js
 // create an empty list
-List<string> my_list = new List<string>();
+var my_list = []
 
 // create a pre-populated list
-List<string> my_list = new List<string> { "josh", "steven" };
+var my_list = ["josh", "steven"]
 
 // print out the contents of a list
-Console.WriteLine(String.Join(", ", my_list));
+console.log(my_list)
 
 // check if something exists within a list
-if (my_list.Contains("josh")) {
+if (my_list.includes("josh")) {
 }
 
 // add to the list
-my_list.Add("Josh");
+my_list.push("Josh")
 
 // remove from the list
-my_list.Remove("Josh");
+my_list.pop("Josh")
 
 // empty the list
-my_list.Clear();
+my_list.clear()
 
 // loop over the list
-foreach (var item in items) {
-    Console.WriteLine(item);
+for (const item of items){
+    console.log(item);
 }
 
 // add the contents of one list to another
