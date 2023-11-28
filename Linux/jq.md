@@ -119,3 +119,41 @@ $ cat employee.json
   }
 }
 ```
+
+## Loop over an array of objects
+[How to iterate over JSON array with jq?](https://stackoverflow.com/a/68121251)
+
+`repositories.json`:
+```
+[
+  {
+    "repositoryName": "repo_a",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_b",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_c",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_d",
+    "repositoryId": "XXXXXX"
+  }
+]
+```
+
+```
+$ cat repositories.json | jq '.[].repositoryName'
+"repo_a"
+"repo_b"
+"repo_c"
+"repo_d"
+$ cat repositories.json | jq -r '.[].repositoryName'
+repo_a
+repo_b
+repo_c
+repo_d
+```
