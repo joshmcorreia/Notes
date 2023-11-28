@@ -177,3 +177,20 @@ repo_b
 repo_c
 repo_d
 ```
+
+---
+
+## Check if a key value pair exists in an array of ojects
+```
+$ cat repositories.json  | jq -e '.[] | select(.repositoryName == "repo_a")'
+{
+  "repositoryName": "repo_a",
+  "repositoryId": "XXXXXX"
+}
+$ echo $?
+0
+
+$ cat repositories.json  | jq -e '.[] | select(.repositoryName == "repo_z")'
+$ echo $?
+4
+```
