@@ -12,6 +12,30 @@ age=23
 if [ "$age" -ne 23 ]; then echo "You're not even 23"; fi
 ```
 
+## Check if a variable is less than a specific integer
+``` bash
+age=22
+if [ "$age" -lt 23 ]; then echo "You're not even 23 yet"; fi
+```
+
+## Check if a variable is less than or equal to a specific integer
+``` bash
+age=22
+if [ "$age" -le 22 ]; then echo "You're not even 23 yet"; fi
+```
+
+## Check if a variable is greater than a specific integer
+``` bash
+age=24
+if [ "$age" -gt 23 ]; then echo "You're older than 23"; fi
+```
+
+## Check if a variable is greater than or equal to a specific integer
+``` bash
+age=24
+if [ "$age" -ge 24 ]; then echo "You're older than 23"; fi
+```
+
 ## Check if a variable is an integer
 [How do I test if a variable is a number in Bash?](https://stackoverflow.com/a/806923)
 ``` bash
