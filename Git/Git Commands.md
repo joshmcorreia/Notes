@@ -101,7 +101,7 @@ git add file.txt
 git rebase --continue
 ```
 
-## Undo a commit and keep the changes ([Source](https://stackoverflow.com/a/15772171))
+## Undo a commit that has not been pushed and keep the changes ([Source](https://stackoverflow.com/a/15772171))
 ```
 # this command can be performed multiple times to undo multiple commits and keep their changes
 git reset HEAD^
