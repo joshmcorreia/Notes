@@ -16,7 +16,7 @@ def test_home_page(page: Page):
 from playwright.sync_api import Page
 
 def handle_response(response):
-    assert (response.status >= 200) and (response.status < 400), f"Status code {response.status}"
+    assert 200 <= response.status < 400, f"Status code {response.status}"
 
 def test_home_page(page: Page):
     page.on("response", handle_response) # any 500 from this point on will trigger the handler
