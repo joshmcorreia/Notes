@@ -21,6 +21,16 @@ $ docker exec -it wireguard /app/show-peer 1
 $ docker exec -it wireguard wg show
 ```
 
+## Turn on the interface
+```
+$ wg-quick up wg0
+```
+
+## Shut down the interface
+```
+$ wg-quick down wg0
+```
+
 ---
 
 # Wireguard Config Settings
@@ -49,6 +59,12 @@ iptables -D FORWARD -i %i -j ACCEPT;
 iptables -D FORWARD -o %i -j ACCEPT;
 # 
 iptables -t nat -D POSTROUTING -o eth+ -j MASQUERADE
+```
+
+## Wireguard config file location
+```
+/config
+/etc/wireguard/wg0.conf
 ```
 
 ## Wireguard config file - %i
