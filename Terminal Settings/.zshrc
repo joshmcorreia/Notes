@@ -1,7 +1,11 @@
-alias ls="ls --color=auto"
-alias ll="ls -la"
-alias psag="ps auxww | grep"
-alias untar="tar -xzvf"
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias psag='ps auxww | grep'
+alias pubip='curl icanhazip.com'
+alias size='du -sh'
+alias sui='sudo -i'
+alias untar='tar -xzvf'
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -28,7 +32,7 @@ setopt HIST_IGNORE_DUPS
 #add timestamp for each entry
 setopt EXTENDED_HISTORY
 
-export GREP_OPTIONS='--color=auto' GREP_COLOR='0;39;101'
+export GREP_COLORS='ms=01;31'
 
 autoload -Uz compinit
 compinit
