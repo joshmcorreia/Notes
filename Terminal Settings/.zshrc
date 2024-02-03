@@ -5,7 +5,7 @@ alias psag='ps auxww | grep'
 alias pubip='curl icanhazip.com'
 alias size='du -sh'
 alias sui='sudo -i'
-alias untar='tar -xzvf'
+alias untar='tar -xzf'
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
