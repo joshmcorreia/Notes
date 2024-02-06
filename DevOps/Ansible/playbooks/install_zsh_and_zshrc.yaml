@@ -1,0 +1,40 @@
+# ansible-playbook -i inventory.yaml install_zsh_and_zshrc.yaml
+
+# NOTE: This has only been tested with root SSH access
+
+- name: Install zsh and zshrc
+  hosts: virtual_machines
+  vars_prompt:
+    - name: user
+      prompt: "User to set up .zshrc for"
+      private: false
+    - name: login_user
+      prompt: "User to log in as"
+      private: false
+  remote_user: "{{ login_user }}"
+  tasks:
+    - name: "Check if the user '{{ user }}' exists"
+      ansible.builtin.getent:
+        database: passwd
+        key: "{{ user }}"
+
+    - name: Install zsh
+      become: true
+      ansible.builtin.package:
+        name: zsh
+        state: present
+
+    - name: Set the user's shell to zsh
+      become: true
+      ansible.builtin.user:
+        name: "{{ user }}"
+        shell: /bin/zsh
+
+    - name: Download .zshrc
+      become: true
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/joshmcorreia/Notes/main/Terminal%20Settings/.zshrc
+        dest: "{{ ansible_env.HOME }}/.zshrc"
+        mode: '0644'
+        owner: "{{ user }}"
+        group: "{{ user }}"
