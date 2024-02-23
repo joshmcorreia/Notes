@@ -25,7 +25,16 @@ Examples:
 ```
 
 ## Using `format()` to pad zeros
-Example:
+Example #1:
+```
+>>> number = 1.0
+>>> "{:0.2f}".format(number)
+'1.00'
+>>> "{:0.5f}".format(number)
+'1.00000'
+```
+
+Example #2:
 ```
 >>> number = 1.0
 >>> format(number, "0.2f")
