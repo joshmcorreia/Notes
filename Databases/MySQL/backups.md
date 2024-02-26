@@ -6,3 +6,10 @@
 $ mysqldump -u root -h obsidian.lan --port=3306 -p cgc_certificate_tracker > 12_12_2023_backup.sql
 Enter password:
 ```
+
+## Import the database from a backup file
+[How to import an SQL file using the command line in MySQL?](https://stackoverflow.com/a/17666279)
+```
+$ mysql -u root -h obsidian.lan --port=3306 -p cgc_certificate_tracker < 12_12_2023_backup.sql
+Enter password:
+```
