@@ -11,7 +11,8 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 setopt PROMPT_SUBST
-PROMPT="%K{white}%F{red}┌─[%F{black}%n%F{yellow}@%F{blue}%m%f%F{red}]─[%F{green}%d%F{red}]─[%F{cyan}%D{%D %L:%M:%S %p}%F{red}]\$(parse_git_branch)"$'\n'"└──╼ %F{yellow}$ %F{black}"
+# ability to show return code taken from https://unix.stackexchange.com/a/703925
+PROMPT="%K{white}%F{red}┌─[%F{black}%n%F{yellow}@%F{blue}%m%f%F{red}]─[%F{green}%d%F{red}]─[%F{cyan}%D{%D %L:%M:%S %p}%F{red}]\$(parse_git_branch)"$'\n'"└──╼ %(?..(%?%)%b )%F{yellow}$ %F{black}"
 TMOUT=1
 TRAPALRM() {
 	zle reset-prompt
