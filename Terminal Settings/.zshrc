@@ -46,3 +46,17 @@ mem()
 {
 	ps -eo rss,pid,euser,args:100 --sort %mem | grep -v grep | grep -i $@ | awk '{printf $1/1024 "MB"; $1=""; print }'
 }
+
+# https://gist.github.com/knadh/123bca5cfdae8645db750bfb49cb44b0
+function preexec() {
+	timer=$(($(date +%s%0N)/1000000))
+}
+function precmd() {
+	if [ $timer ]; then
+		now=$(($(date +%s%0N)/1000000))
+		elapsed=$(($now-$timer))
+
+		export RPROMPT="%F{cyan}${elapsed}ms %{$reset_color%}"
+		unset timer
+	fi
+}
