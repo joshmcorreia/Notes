@@ -49,14 +49,15 @@ mem()
 
 # https://gist.github.com/knadh/123bca5cfdae8645db750bfb49cb44b0
 function preexec() {
-	timer=$(($(date +%s%0N)/1000000))
+	start_time=$(($(date +%s%0N)/1000000))
 }
 function precmd() {
-	if [ $timer ]; then
-		now=$(($(date +%s%0N)/1000000))
-		elapsed=$(($now-$timer))
+	if [ $start_time ]; then
+		end_time=$(($(date +%s%0N)/1000000))
+		elapsed_milliseconds=$(($end_time-$start_time))
+		elapsed_seconds=$(echo "scale=3; $elapsed_milliseconds / 1000" | bc)
 
-		export RPROMPT="%F{cyan}${elapsed}ms %{$reset_color%}"
-		unset timer
+		export RPROMPT="%F{cyan}${elapsed_seconds}s %{$reset_color%}"
+		unset start_time
 	fi
 }
