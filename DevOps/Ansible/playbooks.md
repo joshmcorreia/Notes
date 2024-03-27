@@ -32,3 +32,16 @@ ansible-playbook -i inventory.yaml create_user.yaml --ask-become-pass
       groups: sudo
       append: yes
 ```
+
+## Check that the target is in a list of supported Operating Systems
+```
+  tasks:
+  - name: Check for supported OS distribution
+    fail: msg="The target uses an unsupported operating system '{{ ansible_distribution}}'."
+    when:
+      - ansible_facts['distribution'] != "RedHat"
+  - name: Check for supported OS version
+    fail: msg="The target uses an unsupported operating system version '{{ ansible_facts['distribution_version']}}'."
+    when:
+      - ansible_facts['distribution_version'] not in ["9.1", "9.2", "9.3"]
+```
