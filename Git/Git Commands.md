@@ -156,6 +156,12 @@ git remote prune origin
 git commit --amend --author="Josh Correia <joshmcorreia@example.com>" --no-edit
 ```
 
+## Set the author and committer of the most recent commit to match your git config
+[How do I change the author and committer name/email for multiple commits?](https://stackoverflow.com/a/1320317)
+```
+git commit --amend --no-edit --reset-author
+```
+
 ---
 
 # Tags:
