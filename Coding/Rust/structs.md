@@ -43,3 +43,12 @@ fn main() {
     let origin = Point(0, 0, 0);
 }
 ```
+
+## Unit-Like Struct
+```rust
+struct AlwaysEqual;
+
+fn main() {
+    let subject = AlwaysEqual;
+}
+```

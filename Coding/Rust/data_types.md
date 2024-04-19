@@ -23,7 +23,7 @@ arch - isize - usize
 - f64
 
 ## Booleans
-```
+```rust
 fn main() {
     let t = true;
 
@@ -32,7 +32,7 @@ fn main() {
 ```
 
 ## Character Type
-```
+```rust
 fn main() {
     let c = 'z';
     let z: char = 'ℤ'; // with explicit type annotation
@@ -47,13 +47,22 @@ fn main() {
 - arrays
 
 ## Tuple:
-```
+```rust
 fn main() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
 
     let (x, y, z) = tup;
 
     println!("The value of y is: {y}");
+}
+```
+
+## Arrays:
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+    let b: [i32; 5] = [1, 2, 3, 4, 5];
+    let c = [3; 5];
 }
 ```
 
@@ -72,3 +81,68 @@ fn main() {
 }
 ```
 
+---
+
+# Vectors
+[Vectors - The Rust Programming Language](https://doc.rust-lang.org/book/ch08-01-vectors.html)
+
+## Create a new vector
+```rust
+fn main() {
+    let v: Vec<i32> = Vec::new();
+}
+```
+
+## Create a new vector with the vec macro
+```rust
+fn main() {
+    let v = vec![1, 2, 3];
+}
+```
+
+## Add values to a vector
+```rust
+fn main() {
+    let mut v = Vec::new();
+
+    v.push(5);
+    v.push(6);
+    v.push(7);
+    v.push(8);
+}
+```
+
+## Accessing elements in a vector
+```rust
+fn main() {
+    let v = vec![1, 2, 3, 4, 5];
+
+    let third: &i32 = &v[2];
+    println!("The third element is {third}");
+
+    let third: Option<&i32> = v.get(2);
+    match third {
+        Some(third) => println!("The third element is {third}"),
+        None => println!("There is no third element."),
+    }
+}
+```
+
+## Looping over a vector
+```rust
+fn main() {
+    let v = vec![100, 32, 57];
+    for i in &v {
+        println!("{i}");
+    }
+}
+```
+You can also loop over a vector and edit the elements
+```rust
+fn main() {
+    let mut v = vec![100, 32, 57];
+    for i in &mut v {
+        *i += 50;
+    }
+}
+```
