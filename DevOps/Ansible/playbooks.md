@@ -1,10 +1,14 @@
 # Ansible Playbooks
 [Creating a playbook](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html)
 
+---
+
 ## Run a playbook
 ```
 ansible-playbook -i inventory.yaml playbook.yaml
 ```
+
+---
 
 ## Ping a machine
 ```
@@ -14,6 +18,8 @@ ansible-playbook -i inventory.yaml playbook.yaml
    - name: Ping my hosts
      ansible.builtin.ping:
 ```
+
+---
 
 ## Create a user
 ```
@@ -33,6 +39,8 @@ ansible-playbook -i inventory.yaml create_user.yaml --ask-become-pass
       append: yes
 ```
 
+---
+
 ## Check that the target is in a list of supported Operating Systems
 ```
   tasks:
@@ -44,4 +52,17 @@ ansible-playbook -i inventory.yaml create_user.yaml --ask-become-pass
     fail: msg="The target uses an unsupported operating system version '{{ ansible_facts['distribution_version']}}'."
     when:
       - ansible_facts['distribution_version'] not in ["9.1", "9.2", "9.3"]
+```
+
+---
+
+## Specify the user to SSH as
+
+Add `remote_user:` to your playbook file:
+```
+- name: Install thing
+  hosts: server
+  remote_user: root
+  become: true
+  tasks:
 ```
