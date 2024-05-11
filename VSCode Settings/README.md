@@ -24,7 +24,7 @@ Press <kbd>F1</kbd> and click `Open User Settings (JSON)`
     },
     "[python]": {
         "editor.tabSize": 4,
-        "editor.insertSpaces": false,
+        "editor.insertSpaces": true,
         "editor.detectIndentation":false
     },
     "gitlens.codeLens.enabled": false,
