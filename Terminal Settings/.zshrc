@@ -12,7 +12,7 @@ parse_git_branch() {
 }
 setopt PROMPT_SUBST
 # ability to show return code taken from https://unix.stackexchange.com/a/703925
-PROMPT="%K{white}%F{red}┌─[%F{black}%n%F{yellow}@%F{blue}%m%f%F{red}]─[%F{green}%d%F{red}]─[%F{cyan}%D{%D %L:%M:%S %p}%F{red}]\$(parse_git_branch)"$'\n'"└──╼ %(?..(%?%)%b )%F{yellow}$ %F{black}"
+PROMPT="%F{red}┌─[%F{black}%n%F{yellow}@%F{blue}%m%f%F{red}]─[%F{green}%d%F{red}]─[%F{cyan}%D{%D %L:%M:%S %p}%F{red}]\$(parse_git_branch)"$'\n'"└──╼ %(?..(%?%)%b )%F{yellow}$ %F{black}"
 TMOUT=1
 TRAPALRM() {
 	zle reset-prompt
