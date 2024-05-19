@@ -1,4 +1,0 @@
-virtual_machines:
-  hosts:
-    obsidian:
-      ansible_host: obsidian.lan

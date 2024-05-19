@@ -10,6 +10,8 @@ Add `--ask-pass` to your `ansible-playbook` command:
 ansible-playbook -i inventory.yaml --ask-pass install_thing.yaml
 ```
 
+This allows you to SSH to the host without having to set up SSH keys first.
+
 ---
 
 ## Prompt for the sudo password
