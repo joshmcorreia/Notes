@@ -162,18 +162,6 @@ git commit --amend --author="Josh Correia <joshmcorreia@example.com>" --no-edit
 git commit --amend --no-edit --reset-author
 ```
 
-## Get the commit for when a file was added
-[How to find the commit in which a given file was added?](https://stackoverflow.com/a/13598028)
-```
-git log --diff-filter=A -- foo.js
-```
-
-There is also a handy alias for this:
-```
-git config --global alias.whatadded "log --diff-filter=A"
-git whatadded -- foo.js
-```
-
 ---
 
 # Tags:
