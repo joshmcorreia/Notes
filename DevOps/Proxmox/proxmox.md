@@ -15,7 +15,7 @@ $ sudo pvesh get /cluster/resources --type vm
 ```
 OR
 ```
-$ sudo pvesh get /cluster/resources --type vm --output-format=json
+$ sudo pvesh get /cluster/resources --type vm --output=json-pretty
 ```
 
 ---
@@ -174,14 +174,14 @@ $ sudo pvesh get /nodes/{node_name}/qemu/{vm_id}/config
 ```
 Example:
 ```
-$ sudo pvesh get /nodes/vh8/qemu/352/config --output=json | jq '.'
+$ sudo pvesh get /nodes/vh8/qemu/352/config --output=json-pretty
 {
   "boot": "nc",
   "bootdisk": "sata0",
   "cores": 1,
   "digest": "38e263c13085661b1065f6d6a216e9be74a4fe35",
   "memory": 8192,
-  "name": "xmstest20",
+  "name": "testmachine1",
   "net0": "e1000=BE:E3:46:D3:45:CA,bridge=vmbr0",
   "numa": 0,
   "ostype": "l26",
