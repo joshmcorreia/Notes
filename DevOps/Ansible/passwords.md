@@ -21,3 +21,8 @@ Add `--ask-become-pass` to your `ansible-playbook` command:
 ```
 ansible-playbook -i inventory.yaml --ask-become-pass install_thing.yaml
 ```
+
+---
+
+## Storing passwords without needing to prompt for them
+To securely store passwords, see [vault.md](./vault.md#securely-storing-passwords-in-the-ansible-vault)
