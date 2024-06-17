@@ -27,5 +27,12 @@ ungrouped:
       ansible_user: josh
 ```
 
+## Set the remote ansible temp directory
+Sometimes there are scenarios when you need to change the temp directory due to environment restrictions - I specifically encountered this in an environment where I had a shared `~/` across all machines, so writing to `~/.ansible` caused issues.
+```
+mail.example.com:
+  ansible_remote_tmp: /tmp/.ansible
+```
+
 ## Set the SSH sudo password
 To securely store the SSH sudo password, see [vault.md](./vault.md#securely-storing-passwords-in-the-ansible-vault)
