@@ -94,3 +94,15 @@ debug3: send packet: type 50
 debug3: receive packet: type 52
 Authenticated to obsidian ([192.168.1.2]:22) using "publickey".
 ```
+
+---
+
+## Make sure you are using modern keys
+
+If you have access to the Git server, connect to it and check the `sshd` logs to see if your key algorithm is being denied:
+```
+$ sudo grep Pubkey /var/log/auth.log
+Jul  2 17:03:37 gitlab sshd[363811]: userauth_pubkey: key type ssh-rsa not in PubkeyAcceptedAlgorithms [preauth]
+```
+
+Here we can see that I failed to clone the repo because my machine was sending `ssh-rsa` keys and being denied by `sshd` without GitLab even being involved.
