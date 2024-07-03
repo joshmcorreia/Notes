@@ -1,7 +1,6 @@
 # Debugging SSH keys
 
-## List available host key algorithms
-NOTE: This command should be run on the _client_
+## List available host key algorithms on the client
 ```
 $ ssh -Q key
 ssh-ed25519
@@ -99,9 +98,44 @@ debug3: receive packet: type 52
 Authenticated to obsidian ([192.168.1.2]:22) using "publickey".
 ```
 
+### Check the key algorithm of the key that you are using for authentication
+```
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa ...
+```
+
+### Check the algorithms allowed by the server
+By checking the host key algorithms you are able to see what algorithms the server will allow you to send:
+```
+$ ssh -vvv gitlab.lan
+...
+debug2: host key algorithms: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+```
+On older versions of SSH it doesn't explicitly call out which are the host key algorithms, but they will still be visible in the logs:
+```
+$ ssh -vvv gitlab.lan
+...
+debug2: kex_parse_kexinit: first_kex_follows 0
+debug2: kex_parse_kexinit: reserved 0
+debug2: kex_parse_kexinit: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,kex-strict-s-v00@openssh.com
+debug2: kex_parse_kexinit: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+```
+
+### Compare the key algorithm you are using to the ones allowed by the server
+After completing the above two steps, you can now compare
+```
+ssh-rsa
+```
+to
+```
+rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+```
+
+Since `ssh-rsa` isn't in the host key algorithms, we now know why the server is denying us.
+
 ---
 
-## Make sure you are using modern keys
+## Check the server logs
 
 If you have access to the server, connect to it and check the `sshd` logs to see if your key algorithm is being denied:
 ```
