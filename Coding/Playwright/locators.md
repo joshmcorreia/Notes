@@ -3,7 +3,7 @@
 
 ## Expect a title to contain a string
 ```js
-await expect(page).toHaveTitle(/Kove Customer Portal/);
+await expect(page).toHaveTitle(/Google/);
 ```
 
 ## Check if a button exists
