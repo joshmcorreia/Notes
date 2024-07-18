@@ -29,6 +29,7 @@ Press <kbd>F1</kbd> and click `Preferences: Open Keyboard Shortcuts (JSON)`
 - Jupyter
 - GitLens
 - Better Comments
+- Selected Lines Count
 
 ---
 
