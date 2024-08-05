@@ -1,16 +1,6 @@
 # Networking:
 
-### Enable your internet connection:
-[Source](https://askubuntu.com/questions/434660/how-can-i-disable-my-internet-connection-from-terminal)
-```
-nmcli networking on
-```
-
-### Disable your internet connection:
-[Source](https://askubuntu.com/questions/434660/how-can-i-disable-my-internet-connection-from-terminal)
-```
-nmcli networking off
-```
+- [nmcli](./nmcli.md)
 
 ### Get your IP address:
 ```
