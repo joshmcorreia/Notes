@@ -28,5 +28,6 @@
     "editor.minimap.enabled": false,
     "markdown-preview-github-styles.colorTheme": "light",
     "editor.fontFamily": "Cascadia Code",
-    "workbench.editorLargeFileConfirmation": 100
+    "workbench.editorLargeFileConfirmation": 100,
+    "explorer.compactFolders": false
 }
