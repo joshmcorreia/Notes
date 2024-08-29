@@ -1,8 +1,8 @@
 # To build this Dockerfile, run the following command:
-# docker build -t windows_x11_forwarding -f windows_x11_forwarding.Dockerfile .
+# docker build -t x11_forwarding -f x11_forwarding.Dockerfile .
 
 # To run this docker container run the following command:
-# docker run --name windows_x11_forwarding -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY windows_x11_forwarding
+# $ xhost +local:docker && export DISPLAY=:0 && docker run --name x11_forwarding --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY x11_forwarding
 
 FROM ubuntu:jammy
 
