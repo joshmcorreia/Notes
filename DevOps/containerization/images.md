@@ -3,39 +3,55 @@
 ---
 
 ## Download an existing Docker image:
-```bash
+```
 docker pull ubuntu
 ```
 
 ---
 
 ## Download an existing Docker image with a specific tag:
-```bash
+```
 docker pull ubuntu:focal
 ```
 
 ---
 
 ## List your current docker images:
-```bash
+```
 docker image ls
 ```
 
 ---
 
 ## Delete a docker image:
-```bash
+```
 docker image rm ubuntu
 ```
 OR
-```bash
+```
 docker rmi ubuntu
 ```
 
 ---
 
-## Remove unused images
-[docker image prune](https://docs.docker.com/engine/reference/commandline/image_prune/)
-```bash
+## Delete unused images
+[docker image prune](https://docs.docker.com/reference/cli/docker/image/prune/)
+```
 docker image prune
+```
+
+---
+
+## Delete images that are X hours old
+[docker image prune](https://docs.docker.com/reference/cli/docker/image/prune/)
+```
+docker image prune -a --force --filter "until=24h"
+```
+This will delete all images that are greater than 24 hours old.
+
+---
+
+## Delete images with a specific label
+```
+docker image prune -a --filter "label=maintainer='Red Hat, Inc.'"
 ```
