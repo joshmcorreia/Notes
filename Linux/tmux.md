@@ -20,6 +20,11 @@ tmux ls
 tmux new-session -d -s minecraft_server
 ```
 
+## Create a detached session and run a command in it
+```
+tmux new-session -d -s minecraft_server './start_server.sh'
+```
+
 ## Attach to a detached session
 ```
 tmux attach -t minecraft_server
