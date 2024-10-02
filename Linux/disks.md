@@ -151,3 +151,87 @@ sdc                 8:32   0   32G  0 disk
 └─sdc1              8:33   0   32G  0 part /disk1
 ```
 Notice that the mountpoint for `sdc1` now says `/disk1`.
+
+---
+
+# Extending an LVM device
+
+[Need help extending an LVM volume](https://askubuntu.com/questions/1489128/need-help-extending-an-lvm-volume)
+
+Tested on Ubuntu 22.04
+
+1. Check the current disk size:
+    ```
+    $ lsblk
+    NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+    loop0                       7:0    0 63.9M  1 loop /snap/core20/2318
+    loop1                       7:1    0   64M  1 loop /snap/core20/2379
+    loop2                       7:2    0   87M  1 loop /snap/lxd/28373
+    loop3                       7:3    0   87M  1 loop /snap/lxd/29351
+    loop4                       7:4    0 38.8M  1 loop /snap/snapd/21759
+    loop5                       7:5    0 49.8M  1 loop /snap/snapd/18357
+    sda                         8:0    0  100G  0 disk
+    ├─sda1                      8:1    0    1M  0 part
+    ├─sda2                      8:2    0    2G  0 part /boot
+    └─sda3                      8:3    0   48G  0 part
+      └─ubuntu--vg-ubuntu--lv 253:0    0   48G  0 lvm  /
+    sr0                        11:0    1 1024M  0 rom
+    ```
+1. Extend the size of your drive in your hypervisor. For this example I added 50GB of storage, and you can see that sda3 now shows 98GB.
+    ```
+    $ lsblk
+    NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+    loop0                       7:0    0 63.9M  1 loop /snap/core20/2318
+    loop1                       7:1    0   64M  1 loop /snap/core20/2379
+    loop2                       7:2    0   87M  1 loop /snap/lxd/28373
+    loop3                       7:3    0   87M  1 loop /snap/lxd/29351
+    loop4                       7:4    0 38.8M  1 loop /snap/snapd/21759
+    loop5                       7:5    0 49.8M  1 loop /snap/snapd/18357
+    sda                         8:0    0  100G  0 disk
+    ├─sda1                      8:1    0    1M  0 part
+    ├─sda2                      8:2    0    2G  0 part /boot
+    └─sda3                      8:3    0   98G  0 part
+      └─ubuntu--vg-ubuntu--lv 253:0    0   48G  0 lvm  /
+    sr0                        11:0    1 1024M  0 rom
+    ```
+1. Resize the partition
+    ```
+    $ sudo growpart /dev/sda 3
+    ```
+1. Resize the PV
+    ```
+    $ sudo pvresize /dev/sda3
+    Physical volume "/dev/sda3" changed
+    1 physical volume(s) resized or updated / 0 physical volume(s) not resized
+    ```
+1. Resize the logical volume:
+    ```
+    $ sudo lvresize -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+    Size of logical volume ubuntu-vg/ubuntu-lv changed from <48.00 GiB (12287 extents) to <98.00 GiB (25087 extents).
+    Logical volume ubuntu-vg/ubuntu-lv successfully resized.
+    ```
+1. Resize the file system
+    ```
+    $ sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+    resize2fs 1.46.5 (30-Dec-2021)
+    Filesystem at /dev/mapper/ubuntu--vg-ubuntu--lv is mounted on /; on-line resizing required
+    old_desc_blocks = 6, new_desc_blocks = 13
+    The filesystem on /dev/mapper/ubuntu--vg-ubuntu--lv is now 25689088 (4k) blocks long.
+    ```
+1. Verify that the filesystem sees the new size. In the example below you can see that it correctly says 98GB.
+    ```
+    $ lsblk
+    NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+    loop0                       7:0    0 63.9M  1 loop /snap/core20/2318
+    loop1                       7:1    0   64M  1 loop /snap/core20/2379
+    loop2                       7:2    0   87M  1 loop /snap/lxd/28373
+    loop3                       7:3    0   87M  1 loop /snap/lxd/29351
+    loop4                       7:4    0 38.8M  1 loop /snap/snapd/21759
+    loop5                       7:5    0 49.8M  1 loop /snap/snapd/18357
+    sda                         8:0    0  100G  0 disk
+    ├─sda1                      8:1    0    1M  0 part
+    ├─sda2                      8:2    0    2G  0 part /boot
+    └─sda3                      8:3    0   98G  0 part
+      └─ubuntu--vg-ubuntu--lv 253:0    0   98G  0 lvm  /
+    sr0                        11:0    1 1024M  0 rom
+    ```
