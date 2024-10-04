@@ -29,5 +29,6 @@
     "markdown-preview-github-styles.colorTheme": "light",
     "editor.fontFamily": "Cascadia Code",
     "workbench.editorLargeFileConfirmation": 100,
-    "explorer.compactFolders": false
+    "explorer.compactFolders": false, // compact folders make it hard to see nested folders
+    "terminal.integrated.hideOnStartup": "always", // hide the terminal when starting a new window
 }
