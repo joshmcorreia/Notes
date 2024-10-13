@@ -6,6 +6,7 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.minimap.enabled": false,
     "editor.fontFamily": "Cascadia Code",
+    "editor.stickyScroll.enabled": false, // get rid of the sticky window on top that shows where the block begins
 
     "python.analysis.autoImportCompletions": false,
     "diffEditor.ignoreTrimWhitespace": false,
