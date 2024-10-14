@@ -12,6 +12,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "search.useIgnoreFiles": false,
     "workbench.editorLargeFileConfirmation": 100,
+    "workbench.startupEditor": "none", // disable the welcome page
     "scm.alwaysShowActions": true,
 
     // git
