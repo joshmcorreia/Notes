@@ -20,7 +20,7 @@ The main purpose of Continuous Integration is to allow a developer's changes to 
 
 From personal experience I have found this to be important.
 1. Developer writes code on a feature branch
-2. Every time code is commited, CI runs on that branch and ensures that the code builds properly. If the code does not build properly then that developer will have to make another commit which fixes the issue(s)
+2. Every time code is committed, CI runs on that branch and ensures that the code builds properly. If the code does not build properly then that developer will have to make another commit which fixes the issue(s)
 3. When the developer is done with their branch, they make a merge request
 4. Other developers review the merge request, only after the pipelines successfully complete. This ensures that other developers are not wasting their time reviewing code that is incorrect. Reviewers should check for things that are harder to detect via automation, such as ensuring best practices are followed or ensuring that security vulnerabilities are not introduced.
 

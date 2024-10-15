@@ -180,7 +180,7 @@ repo_d
 
 ---
 
-## Check if a key value pair exists in an array of ojects
+## Check if a key value pair exists in an array of objects
 [How to check for presence of 'key' in jq before iterating over the values](https://stackoverflow.com/a/42099242)
 ```
 $ cat repositories.json  | jq -e '.[] | select(.repositoryName == "repo_a")'

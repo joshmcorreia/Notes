@@ -49,7 +49,7 @@ Note: these are multiple locations where you can download the above files. You d
 17) Once the above step completes and says "Completed" on the screen, remove the floppy disk (click the floppy disk in the bottom right of VMWare and click "Disconnect"), then press enter in the terminal
 18) Once the VM reboots, reconnect the floppy disk because the custom drivers are necessary to load up the VM.
 19) Once you get to the "Summary of Devices" window, I recommend taking a snapshot because the mouse is very touchy and it's hard to apply settings.
-20) Go to the Disply Devices tab (looks like a monitor) and select "Default VGA Adapter (v4.00)" then click "Add"
+20) Go to the Display Devices tab (looks like a monitor) and select "Default VGA Adapter (v4.00)" then click "Add"
 21) Go back to the main tab (looks like a piece of paper) and select "Save"
 22) Once the "Install NEXTSTEP" window pops up, deselect all of the additional languages (they're not necessary), then click "Install"
 23) Disconnect the floppy drive again once the "Restart" prompt shows up, then click "Restart"
