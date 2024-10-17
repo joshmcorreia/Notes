@@ -144,3 +144,8 @@ Jul  2 17:03:37 gitlab sshd[363811]: userauth_pubkey: key type ssh-rsa not in Pu
 ```
 
 Here we can see that the client sent `ssh-rsa`, but the server does not accept this kind of algorithm.
+
+If `/var/log/auth.log` doesn't exist then you can look in `journalctl` instead:
+```
+journalctl -u sshd -f
+```
