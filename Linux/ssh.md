@@ -15,6 +15,10 @@ ssh-keygen -b 4096 # specifies the key size to be 4096 bits
 ```
 ssh-copy-id user@hostname.example.com
 ```
+OR
+```
+ssh-copy-id -i ~/.ssh/id_ed25519 user@hostname.example.com
+```
 
 ### Copy SSH keys from a Windows box to a Linux box:
 [Source](https://www.chrisjhart.com/Windows-10-ssh-copy-id/)
