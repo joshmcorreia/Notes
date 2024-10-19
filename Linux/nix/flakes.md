@@ -1,7 +1,8 @@
 # Nix Flakes
 
 - [nix flake - Nix Reference Manual](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-flake)
-- [Ultimate Nix Flakes Guide - Vimjoyer - YouTube](https://www.youtube.com/watch?v=JCeYq72Sko0)
+- [Ultimate Nix Flakes Guide - YouTube (Vimjoyer)](https://www.youtube.com/watch?v=JCeYq72Sko0)
+- [Use flake.nix, not Dockerfile - MCH2022 - YouTube (Matthew Croughan)](https://www.youtube.com/watch?v=0uixRE8xlbY)
 
 ## Enable flakes
 Add the following to `/etc/nix/nix.conf`:
