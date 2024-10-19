@@ -6,7 +6,7 @@
 ## Enable flakes
 Add the following to `/etc/nix/nix.conf`:
 ```
-experimental-features = nix-command flake
+experimental-features = nix-command flakes
 ```
 
 ## Create a flake
