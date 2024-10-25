@@ -51,6 +51,10 @@ enp130s0f1          290c61ce-fbce-4b49-9d4d-10391e4a7f34  ethernet    --
 ib0                 e421917e-ed2d-4bb4-950a-aca9dabc20ef  infiniband  --
 ib1                 412a097a-ee42-4bac-a166-15a00ffecb6f  infiniband  --
 ```
+OR
+```
+# nmcli con
+```
 
 ---
 
