@@ -36,6 +36,19 @@ lo          loopback    unmanaged     --
 
 ---
 
+# List all devices (with verbose information):
+```
+# nmcli device show
+```
+
+---
+# Get super verbose connection information for a specific device:
+```
+# nmcli con show eno1
+```
+
+---
+
 # List all connections:
 ```
 # nmcli connection show
