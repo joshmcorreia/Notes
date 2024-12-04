@@ -1,8 +1,5 @@
 # Git
 
-## What is the best way to use Git?
-Of course there is never a solution that works for all problems, but the "[successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)" by Vincent Driessen is a very useful guide to follow.
-
 ## What is a tag?
 The best explanation of tags that I've read is that a "tag is just an annotated pointer to a commit" ([Source](https://softwareengineering.stackexchange.com/a/165733)).
 
