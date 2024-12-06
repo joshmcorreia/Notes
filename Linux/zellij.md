@@ -22,6 +22,12 @@
 ### Open a new pane
 <kbd>Ctrl</kbd> + <kbd>P</kbd>, <kbd>N</kbd>
 
+### Open a new horizontal pane
+<kbd>Ctrl</kbd> + <kbd>P</kbd>, <kbd>D</kbd>
+
+### Open a new vertical pane
+<kbd>Ctrl</kbd> + <kbd>P</kbd>, <kbd>R</kbd>
+
 ### Highlight a different pane
 <kbd>Ctrl</kbd> + <kbd>P</kbd> then use the arrow keys
 
@@ -54,6 +60,11 @@ $ zellij attach profound-panda
 ### Kill a session
 ```
 $ zellij k profound-panda
+```
+
+### Kill exited sessions
+```
+$ zellij delete-all-sessions
 ```
 
 ### Kill all sessions
