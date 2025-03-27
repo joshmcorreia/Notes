@@ -180,8 +180,67 @@ repo_d
 
 ---
 
+## Loop over an array of objects when a key only sometimes exists
+
+[How to check for presence of 'key' in jq before iterating over the values](https://stackoverflow.com/a/42099242)
+
+`repositories.json`:
+```
+[
+  {
+    "repositoryName": "repo_a",
+    "repositoryId": "XXXXXX",
+    "repositoryAuthor": "bob"
+  },
+  {
+    "repositoryName": "repo_b",
+    "repositoryId": "XXXXXX",
+    "repositoryAuthor": "sally"
+  },
+  {
+    "repositoryName": "repo_c",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_d",
+    "repositoryId": "XXXXXX"
+  }
+]
+```
+
+```
+$ cat repositories.json | jq -r '.[] | select (.repositoryAuthor != null) | .repositoryAuthor'
+bob
+sally
+```
+
+---
+
 ## Check if a key value pair exists in an array of objects
 [How to check for presence of 'key' in jq before iterating over the values](https://stackoverflow.com/a/42099242)
+
+`repositories.json`:
+```
+[
+  {
+    "repositoryName": "repo_a",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_b",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_c",
+    "repositoryId": "XXXXXX"
+  },
+  {
+    "repositoryName": "repo_d",
+    "repositoryId": "XXXXXX"
+  }
+]
+```
+
 ```
 $ cat repositories.json  | jq -e '.[] | select(.repositoryName == "repo_a")'
 {
