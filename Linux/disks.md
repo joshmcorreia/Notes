@@ -129,6 +129,7 @@ UUID=a7d6b8e2-3f4a-4923-a94d-2c9cce382d14 /disk1 ext4   defaults,errors=remount-
 ```
 Mount the disk drive
 ```
+$ sudo systemctl daemon-reload
 $ sudo mount -a
 ```
 Verify that the drive has been mounted
