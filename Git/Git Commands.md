@@ -98,10 +98,14 @@ git add file.txt
 git rebase --continue
 ```
 
-## Undo a commit that has not been pushed and keep the changes ([Source](https://stackoverflow.com/a/15772171))
+## Undo a commit and keep the changes ([Source](https://stackoverflow.com/a/15772171))
 ```
 # this command can be performed multiple times to undo multiple commits and keep their changes
 git reset HEAD^
+```
+If you already pushed the commit, make sure to push the removal of that commit
+```
+git push --force
 ```
 
 ## Remove a specific file from the latest commit
