@@ -21,6 +21,21 @@ ecdsa-sha2-nistp521-cert-v01@openssh.com
 sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
 ```
 
+If the client is too old to support the `-Q` flag, you can look at the manpage instead:
+```
+$ man ssh_config | grep -A 15 HostKeyAlgorithms
+HostKeyAlgorithms
+    Specifies the protocol version 2 host key algorithms that the client wants to use in order of preference.  The default for this option is:
+
+    ecdsa-sha2-nistp256-cert-v01@openssh.com,
+    ecdsa-sha2-nistp384-cert-v01@openssh.com,
+    ecdsa-sha2-nistp521-cert-v01@openssh.com,
+    ssh-rsa-cert-v01@openssh.com,ssh-dss-cert-v01@openssh.com,
+    ssh-rsa-cert-v00@openssh.com,ssh-dss-cert-v00@openssh.com,
+    ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,
+    ssh-rsa,ssh-dss
+```
+
 ---
 
 ## Check that the right private key is being used for authentication
